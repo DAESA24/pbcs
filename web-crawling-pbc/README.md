@@ -133,4 +133,4 @@ uv pip install crawl4ai
 ## Related Documentation
 
 - [Crawl4AI Docs](https://docs.crawl4ai.com/)
-- Local docs: `c:\Users\drewa\work\dev\local-infrastrructure-projects\crawl4ai-implementation-project\crawl4ai-docs\`
+- Local docs: `c:\Users\drewa\work\dev\pbc-implementation-projectsweb-crawling-pbc-implementation-project\crawl4ai-docs\`

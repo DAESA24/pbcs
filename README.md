@@ -72,4 +72,4 @@ Each PBC evolves through use. After completing a project:
 
 ## Related Projects
 
-- [crawl4ai-implementation-project](https://github.com/DAESA24/crawl4ai-implementation-project) - Implementation docs and setup history for web-crawling-pbc
+- [web-crawling-pbc-implementation-project](https://github.com/DAESA24/web-crawling-pbc-implementation-project) - Implementation docs and setup history for web-crawling-pbc
