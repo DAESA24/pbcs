@@ -1,0 +1,156 @@
+# Web Crawling PBC Definition
+# Packaged Business Capability for content acquisition from web sources
+
+pbc_name: "Web Crawling"
+version: "0.1.0"
+status: "experimental"
+created: "2025-12-04"
+
+description: |
+  Content acquisition from web sources - URLs to markdown/structured data.
+  Feeds content into rag-pipeline for indexing and semantic search.
+
+# Core tools in this PBC's venv
+tools:
+  crawl4ai:
+    purpose: "Web scraping and content extraction"
+    version: "latest"
+    access:
+      cli: "crwl"           # global via uv tool install
+      python: ".venv"       # scripts in this PBC
+    capabilities:
+      - "URL to markdown conversion"
+      - "Deep crawling with BFS/DFS strategies"
+      - "CSS/XPath structured extraction"
+      - "JavaScript-rendered page support"
+      - "Authentication via browser profiles"
+
+# What goes in, what comes out
+interfaces:
+  inputs:
+    - url: "Single URL or list of URLs"
+    - extraction_type: "markdown | css_selector | xpath"
+    - depth: "For deep crawling - max pages or link depth"
+    - selectors: "CSS/XPath selectors for structured extraction"
+  outputs:
+    - markdown: "Clean markdown text"
+    - structured_data: "JSON from selectors"
+    - metadata: "Title, links, images, timestamps"
+
+# Reusable scripts inventory
+scripts:
+  url_to_markdown:
+    file: "scripts/url_to_markdown.py"
+    status: "active"
+    description: "Single URL to clean markdown"
+    use_cases:
+      - "Claudesidian inbox processing"
+      - "Quick article capture"
+      - "Replacing WebFetch in workflows"
+    inputs:
+      - url: "URL to crawl"
+      - output: "File path or stdout"
+    outputs:
+      - markdown: "Clean markdown with metadata"
+
+  batch_urls_to_markdown:
+    file: "scripts/batch_urls_to_markdown.py"
+    status: "active"
+    description: "Multiple URLs to markdown files"
+    use_cases:
+      - "Research session link processing"
+      - "Bulk content ingestion"
+    inputs:
+      - urls: "Text file with URLs or comma-separated list"
+      - output_dir: "Directory for markdown files"
+    outputs:
+      - files: "Directory of markdown files named by title/slug"
+
+  deep_crawl_docs:
+    file: "scripts/deep_crawl_docs.py"
+    status: "active"
+    description: "Crawl nested documentation sites"
+    use_cases:
+      - "Pipeline theme docs ingestion"
+      - "Any documentation site capture"
+      - "Feeding docs to rag-pipeline"
+    inputs:
+      - root_url: "Starting URL"
+      - depth: "Max crawl depth"
+      - pattern: "URL pattern to stay within"
+    outputs:
+      - directory: "Markdown files preserving site structure"
+
+# Documentation references
+documentation:
+  tool_docs: "docs/"
+  readme: "README.md"
+  claude_instructions: "CLAUDE.md"
+  key_references:
+    simple_crawling: "docs/02-crawl4ai-simple-crawling-2025-12-03.md"
+    deep_crawling: "docs/07-crawl4ai-deep-crawling-2025-12-03.md"
+    cli_usage: "docs/09-crawl4ai-cli-2025-12-03.md"
+    no_llm_extraction: "docs/05-crawl4a-data-extractions-no-llm-2025-12-03.md"
+    multi_url: "docs/06-crawl4ai-multi-url-crawling-2025-12-03.md"
+
+# Workflow patterns for common use cases
+workflows:
+  directory: "workflows/"
+  index: "workflows/README.md"
+  patterns:
+    deep_company_research:
+      file: "workflows/deep-company-research.md"
+      abstraction: "medium"
+      status: "draft"
+      description: "Multi-phase research workflow for company analysis"
+      validated_by: ["viktor-ai-research"]
+    documentation_ingestion:
+      file: "workflows/documentation-ingestion.md"
+      abstraction: "low"
+      status: "stub"
+      description: "Crawl documentation sites for RAG indexing"
+    competitive_analysis:
+      file: "workflows/competitive-analysis.md"
+      abstraction: "low"
+      status: "stub"
+      description: "Compare multiple companies/products"
+    news_monitoring:
+      file: "workflows/news-monitoring.md"
+      abstraction: "low"
+      status: "stub"
+      description: "Track news and articles about topics"
+    knowledge_base_building:
+      file: "workflows/knowledge-base-building.md"
+      abstraction: "low"
+      status: "stub"
+      description: "Build reference collections from web sources"
+
+# Workflow evolution system - feedback loop for improving workflows
+workflow_evolution:
+  directory: "workflow-evolution/"
+  readme: "workflow-evolution/README.md"
+  purpose: "Systematically capture learnings from projects and feed them back into workflow documents"
+  components:
+    extraction_template:
+      file: "workflow-evolution/extraction-template.md"
+      purpose: "Template for extracting patterns from completed projects"
+    integration_guide:
+      file: "workflow-evolution/integration-guide.md"
+      purpose: "Guide for applying extraction findings to workflow documents"
+    extractions:
+      directory: "workflow-evolution/extractions/"
+      purpose: "Archive of completed extraction records"
+  process:
+    - "Phase 1: Extract - Analyze project artifacts using extraction template"
+    - "Phase 2: Store - Save extraction to extractions/ directory"
+    - "Phase 3: Integrate - Update workflow documents using integration guide"
+
+# How this PBC connects to others
+composability:
+  role: "content_acquisition"
+  feeds_into:
+    - pbc: "rag-pipeline"
+      interface: "Extracted markdown text for indexing"
+  peer_capabilities:
+    - pbc: "media-transcription"
+      relationship: "Both feed content to rag-pipeline"
