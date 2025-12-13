@@ -63,9 +63,27 @@ Check `pbc-definition.yaml` for available scripts and their status.
 
 ## Default Output Location
 
-Downloaded files go to: `/c/Users/drewa/pbcs/media-download-pbc/downloads/`
+**Global Default:** Downloaded files go to: `/c/Users/drewa/pbcs/media-download-pbc/downloads/`
 
-Override with `-o` flag or `--output` in scripts.
+The global yt-dlp configuration (at `%APPDATA%\yt-dlp\config.txt`) is configured to use this directory by default. This means:
+
+```bash
+# Automatically downloads to PBC downloads folder
+yt-dlp <url>
+```
+
+Override with `-o` flag or `--output` in scripts:
+
+```bash
+# Download to different location
+yt-dlp -o "/some/other/path/%(title)s.%(ext)s" <url>
+```
+
+**Global Config Details:**
+- Location: `C:\Users\drewa\AppData\Roaming\yt-dlp\config.txt`
+- Writes metadata JSON files automatically
+- Embeds metadata and thumbnails by default
+- Downloads best quality (bestvideo+bestaudio/best)
 
 ## Constraints
 
