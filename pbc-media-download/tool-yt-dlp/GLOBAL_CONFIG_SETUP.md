@@ -14,7 +14,7 @@ C:\Users\drewa\AppData\Roaming\yt-dlp\config.txt
 
 When running `yt-dlp` from any terminal:
 
-- **Output Directory:** `/c/Users/drewa/pbcs/pbc-media-download/downloads/`
+- **Output Directory:** `/c/Users/drewa/pbcs/pbc-media-download/tool-yt-dlp/downloads/`
 - **Metadata:** Writes `.info.json` sidecar files automatically
 - **Embeddings:** Adds metadata and thumbnails to files
 - **Quality:** Downloads best available (bestvideo+bestaudio/best)
@@ -29,7 +29,7 @@ yt-dlp https://youtube.com/watch?v=VIDEO_ID
 yt-dlp -o "C:\Custom\Path\%(title)s.%(ext)s" https://youtube.com/watch?v=VIDEO_ID
 
 # Use config preset
-yt-dlp --config-location /c/Users/drewa/pbcs/pbc-media-download/configs/audio-only.conf https://youtube.com/watch?v=VIDEO_ID
+yt-dlp --config-location /c/Users/drewa/pbcs/pbc-media-download/tool-yt-dlp/configs/audio-only.conf https://youtube.com/watch?v=VIDEO_ID
 ```
 
 ## Customization
