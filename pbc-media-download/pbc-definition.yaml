@@ -120,5 +120,5 @@ composability:
       interface: "Audio files for transcription -> text indexing"
       status: "planned"
   peer_capabilities:
-    - pbc: "web-crawling-pbc"
+    - pbc: "pbc-web-crawling"
       relationship: "Both acquire content for rag-pipeline"
