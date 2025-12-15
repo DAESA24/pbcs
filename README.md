@@ -39,13 +39,16 @@ Each PBC has:
 
 ```
 {pbc-name}/
-├── CLAUDE.md              # AI agent instructions
-├── README.md              # Human documentation
-├── pbc-definition.yaml    # Capability manifest
-├── scripts/               # Reusable scripts
-├── workflows/             # Task patterns and guides
-├── docs/                  # Tool documentation
-└── .venv/                 # Python environment (gitignored)
+├── CLAUDE.md              # PBC-level routing (NEW)
+├── README.md              # PBC-level overview (NEW)
+└── tool-{toolname}/       # Tool-specific subdirectory
+    ├── CLAUDE.md          # Tool-specific AI instructions
+    ├── README.md          # Tool-specific documentation
+    ├── pbc-definition.yaml
+    ├── scripts/
+    ├── workflows/
+    ├── docs/
+    └── .venv/
 ```
 
 ## Using a PBC
@@ -55,7 +58,7 @@ Each PBC has:
 Point the agent to the PBC's `CLAUDE.md` for instructions:
 
 ```
-Read C:\Users\drewa\pbcs\pbc-web-crawling\CLAUDE.md and help me crawl this documentation site.
+Read C:\Users\drewa\pbcs\pbc-web-crawling\tool-crawl4ai\CLAUDE.md and help me crawl this documentation site.
 ```
 
 ### For Humans

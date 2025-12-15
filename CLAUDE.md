@@ -19,15 +19,15 @@ This is Drew Arnold's **Packaged Business Capabilities (PBCs)** monorepo - a col
 
 | User needs to... | Use this PBC | Read first |
 |------------------|--------------|------------|
-| Convert URLs to markdown | pbc-web-crawling | `pbc-web-crawling/CLAUDE.md` |
-| Crawl documentation sites | pbc-web-crawling | `pbc-web-crawling/CLAUDE.md` |
-| Extract structured data from web | pbc-web-crawling | `pbc-web-crawling/CLAUDE.md` |
-| Manage credentials securely | pbc-secrets-management | `pbc-secrets-management/CLAUDE.md` |
-| Inject secrets into env vars | pbc-secrets-management | `pbc-secrets-management/CLAUDE.md` |
-| Use secret references (op://) | pbc-secrets-management | `pbc-secrets-management/CLAUDE.md` |
+| Convert URLs to markdown | pbc-web-crawling | `pbc-web-crawling/tool-crawl4ai/CLAUDE.md` |
+| Crawl documentation sites | pbc-web-crawling | `pbc-web-crawling/tool-crawl4ai/CLAUDE.md` |
+| Extract structured data from web | pbc-web-crawling | `pbc-web-crawling/tool-crawl4ai/CLAUDE.md` |
+| Manage credentials securely | pbc-secrets-management | `pbc-secrets-management/tool-1password-cli/CLAUDE.md` |
+| Inject secrets into env vars | pbc-secrets-management | `pbc-secrets-management/tool-1password-cli/CLAUDE.md` |
+| Use secret references (op://) | pbc-secrets-management | `pbc-secrets-management/tool-1password-cli/CLAUDE.md` |
 | Index content for RAG | pbc-rag-pipeline | (planned) |
 | Transcribe audio/video | pbc-media-transcription | (planned) |
-| Download video/audio from web | pbc-media-download | `pbc-media-download/CLAUDE.md` |
+| Download video/audio from web | pbc-media-download | `pbc-media-download/tool-yt-dlp/CLAUDE.md` |
 
 3. Once you identify the PBC, read its `CLAUDE.md` for specific instructions
 
@@ -41,7 +41,7 @@ Each PBC provides multiple access methods:
 
 ```
 Global CLI (quick tasks)     → crwl, transcribe, etc.
-PBC venv (Python scripts)    → {pbc}/.venv/Scripts/python.exe
+PBC venv (Python scripts)    → {pbc}/{tool}/.venv/Scripts/python.exe
 pbc-definition.yaml          → Script inventory and capabilities
 ```
 
@@ -99,6 +99,6 @@ If the user needs a capability that doesn't exist:
 
 For specific task guidance, read the PBC's own CLAUDE.md:
 
-- [pbc-web-crawling/CLAUDE.md](pbc-web-crawling/CLAUDE.md) - Web scraping, URL to markdown, deep crawling
-- [pbc-secrets-management/CLAUDE.md](pbc-secrets-management/CLAUDE.md) - Secure credential management, secret references, environment injection
-- [pbc-media-download/CLAUDE.md](pbc-media-download/CLAUDE.md) - Video/audio downloads, metadata extraction
+- [pbc-web-crawling/tool-crawl4ai/CLAUDE.md](pbc-web-crawling/tool-crawl4ai/CLAUDE.md) - Web scraping, URL to markdown, deep crawling
+- [pbc-secrets-management/tool-1password-cli/CLAUDE.md](pbc-secrets-management/tool-1password-cli/CLAUDE.md) - Secure credential management, secret references, environment injection
+- [pbc-media-download/tool-yt-dlp/CLAUDE.md](pbc-media-download/tool-yt-dlp/CLAUDE.md) - Video/audio downloads, metadata extraction
