@@ -74,7 +74,7 @@ C:\Users\drewa\pbcs\pbc-web-crawling\tool-crawl4ai\.venv\Scripts\python.exe ^
 | `batch_urls_to_markdown.py` | Active | Multiple URLs to markdown files |
 | `deep_crawl_docs.py` | Active | Crawl nested documentation sites |
 
-See [pbc-definition.yaml](pbc-definition.yaml) for detailed script specifications.
+See [pbc-tool-definition.yaml](pbc-tool-definition.yaml) for detailed script specifications.
 
 ## Workflows
 

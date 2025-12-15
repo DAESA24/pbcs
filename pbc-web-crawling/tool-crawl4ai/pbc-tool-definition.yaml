@@ -1,0 +1,116 @@
+# PBC Tool Definition: Crawl4AI
+# Tool implementation within pbc-web-crawling
+
+tool_name: "Crawl4AI"
+tool_id: "crawl4ai"
+parent_pbc: "pbc-web-crawling"
+version: "0.1.0"
+status: "experimental"
+created: "2025-12-04"
+updated: "2025-12-15"
+
+description: >
+  Web scraping and content extraction tool. Converts URLs to clean markdown,
+  performs deep crawling of documentation sites, and extracts structured data
+  using CSS/XPath selectors. Feeds content into rag-pipeline for indexing.
+
+# How to invoke this tool
+access:
+  cli:
+    command: "crwl"
+    install_method: "uv tool install crawl4ai"
+    example: "crwl https://example.com -o markdown"
+  venv:
+    path: ".venv/Scripts/python.exe"
+    absolute: "C:/Users/drewa/pbcs/pbc-web-crawling/tool-crawl4ai/.venv/Scripts/python.exe"
+
+# Tool capabilities (what it can do)
+capabilities:
+  - "URL to markdown conversion"
+  - "Deep crawling with BFS/DFS strategies"
+  - "CSS/XPath structured extraction"
+  - "JavaScript-rendered page support"
+  - "Authentication via browser profiles"
+  - "Multi-URL batch processing"
+
+# Reusable scripts - check here before writing new code
+scripts:
+  url_to_markdown:
+    file: "scripts/url_to_markdown.py"
+    status: "active"
+    description: "Single URL to clean markdown"
+    use_when: "Quick article capture, replacing WebFetch, Claudesidian inbox processing"
+
+  batch_urls_to_markdown:
+    file: "scripts/batch_urls_to_markdown.py"
+    status: "active"
+    description: "Multiple URLs to markdown files"
+    use_when: "Research session link processing, bulk content ingestion"
+
+  deep_crawl_docs:
+    file: "scripts/deep_crawl_docs.py"
+    status: "active"
+    description: "Crawl nested documentation sites"
+    use_when: "Documentation site capture, feeding docs to rag-pipeline"
+
+# Configuration presets
+configs:
+  directory: "configs/"
+  presets:
+    - file: "configs/tds-article-clean.yaml"
+      purpose: "Towards Data Science article extraction"
+    - file: "configs/wsj-article-clean.yaml"
+      purpose: "Wall Street Journal article extraction"
+
+# Key documentation for specific tasks
+docs:
+  directory: "docs/"
+  by_task:
+    simple_crawling: "docs/02-crawl4ai-simple-crawling-2025-12-03.md"
+    deep_crawling: "docs/07-crawl4ai-deep-crawling-2025-12-03.md"
+    cli_usage: "docs/09-crawl4ai-cli-2025-12-03.md"
+    no_llm_extraction: "docs/05-crawl4a-data-extractions-no-llm-2025-12-03.md"
+    multi_url: "docs/06-crawl4ai-multi-url-crawling-2025-12-03.md"
+    http_crawler: "docs/10-crawl4ai-http-based-crawler-2025-12-03.md"
+
+# Workflow patterns
+workflows:
+  directory: "workflows/"
+  index: "workflows/README.md"
+  patterns:
+    - id: "deep-company-research"
+      status: "draft"
+      file: "workflows/deep-company-research.md"
+    - id: "documentation-ingestion"
+      status: "stub"
+      file: "workflows/documentation-ingestion.md"
+    - id: "competitive-analysis"
+      status: "stub"
+      file: "workflows/competitive-analysis.md"
+    - id: "news-monitoring"
+      status: "stub"
+      file: "workflows/news-monitoring.md"
+    - id: "knowledge-base-building"
+      status: "stub"
+      file: "workflows/knowledge-base-building.md"
+
+# How this tool connects to other PBCs
+composability:
+  role: "content_acquisition"
+  outputs:
+    - type: "markdown"
+      description: "Clean markdown text from web pages"
+    - type: "structured_data"
+      description: "JSON from CSS/XPath selectors"
+  feeds_into:
+    - pbc: "pbc-rag-pipeline"
+      interface: "Extracted markdown for indexing"
+      status: "planned"
+  peers:
+    - pbc: "pbc-media-transcription"
+      relationship: "Both feed content to rag-pipeline"
+
+# Tool-specific constraints (beyond global PBC constraints)
+constraints:
+  - "No LLM extraction - use CSS/XPath selectors"
+  - "Ollama is for embeddings only"

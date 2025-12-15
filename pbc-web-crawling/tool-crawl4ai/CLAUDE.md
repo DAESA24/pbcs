@@ -3,6 +3,7 @@
 ## When to Use This PBC
 
 Use this PBC when the user needs to:
+
 - Convert URLs to markdown
 - Crawl documentation sites
 - Extract structured data from web pages
@@ -11,11 +12,13 @@ Use this PBC when the user needs to:
 ## Quick Reference
 
 **Global CLI (simple tasks):**
+
 ```bash
 crwl https://example.com -o markdown
 ```
 
 **PBC venv (Python scripts):**
+
 ```bash
 C:\Users\drewa\pbcs\pbc-web-crawling\tool-crawl4ai\.venv\Scripts\python.exe script.py
 ```
@@ -36,7 +39,7 @@ C:\Users\drewa\pbcs\pbc-web-crawling\tool-crawl4ai\.venv\Scripts\python.exe scri
 
 ## Scripts Inventory
 
-Check `pbc-definition.yaml` for available scripts and their status.
+Check `pbc-tool-definition.yaml` for available scripts and their status.
 Prefer using existing scripts over writing new code.
 
 ## Workflows
