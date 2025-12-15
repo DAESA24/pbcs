@@ -1,0 +1,30 @@
+# Crawler config for clean Towards Data Science article extraction
+# Removes header/footer navigation while preserving article content and images
+
+# Don't use css_selector - it's too restrictive and may miss title
+# Instead, rely on excluded_tags and excluded_selector to filter out noise
+
+# Remove navigation elements and footer
+excluded_tags:
+  - nav
+  - header
+  - footer
+  - aside
+  - script
+  - noscript
+  - style
+
+# Exclude site navigation and social elements by selector
+excluded_selector: ".site-header, .site-footer, .navigation, .nav-menu, .social-share, .related-articles, .author-bio, .comments, .sidebar, [class*='cookie'], [class*='newsletter'], [class*='subscribe']"
+
+# Page handling
+remove_overlay_elements: true
+magic: true
+scan_full_page: true
+
+# Keep images
+exclude_external_images: false
+
+# Remove external links but keep images
+exclude_external_links: true
+exclude_social_media_links: true

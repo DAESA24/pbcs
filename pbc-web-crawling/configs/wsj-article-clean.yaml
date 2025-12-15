@@ -1,0 +1,17 @@
+# Crawler config for clean Wall Street Journal article extraction
+# Uses css_selector to target article content directly
+
+# Target the article content container
+css_selector: "article, .article-content, .wsj-article-body, [data-module='article-body'], main[role='main']"
+
+# Page handling
+remove_overlay_elements: true
+magic: true
+scan_full_page: true
+
+# Keep images
+exclude_external_images: false
+
+# Remove external links but keep images
+exclude_external_links: true
+exclude_social_media_links: true

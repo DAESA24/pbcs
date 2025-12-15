@@ -17,7 +17,7 @@ crwl https://example.com -o markdown
 
 **PBC venv (Python scripts):**
 ```bash
-C:\Users\drewa\pbcs\web-crawling-pbc\.venv\Scripts\python.exe script.py
+C:\Users\drewa\pbcs\pbc-web-crawling\.venv\Scripts\python.exe script.py
 ```
 
 ## Documentation by Task
