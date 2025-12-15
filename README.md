@@ -37,14 +37,14 @@ pbc-media-transcription┘
 
 Each PBC has:
 
-```
-{pbc-name}/
-├── CLAUDE.md              # PBC-level routing (NEW)
-├── README.md              # PBC-level overview (NEW)
-└── tool-{toolname}/       # Tool-specific subdirectory
-    ├── CLAUDE.md          # Tool-specific AI instructions
-    ├── README.md          # Tool-specific documentation
-    ├── pbc-definition.yaml
+```text
+pbc-{domain}/
+├── CLAUDE.md                   # PBC-level routing
+├── README.md                   # PBC-level overview
+└── tool-{toolname}/            # Tool-specific subdirectory
+    ├── CLAUDE.md               # Tool-specific AI instructions
+    ├── README.md               # Tool-specific documentation
+    ├── pbc-tool-definition.yaml  # Tool manifest
     ├── scripts/
     ├── workflows/
     ├── docs/
@@ -64,7 +64,7 @@ Read C:\Users\drewa\pbcs\pbc-web-crawling\tool-crawl4ai\CLAUDE.md and help me cr
 ### For Humans
 
 1. Check the PBC's `README.md` for overview and quick start
-2. Review `pbc-definition.yaml` for available scripts and capabilities
+2. Review `pbc-tool-definition.yaml` for available scripts and capabilities
 3. Use scripts directly or follow workflows for complex tasks
 
 ## Contributing

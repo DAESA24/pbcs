@@ -40,12 +40,12 @@ If a project's CLAUDE.md says "use the web-crawling PBC", come here and read the
 Each PBC provides multiple access methods:
 
 ```
-Global CLI (quick tasks)     → crwl, transcribe, etc.
+Global CLI (quick tasks)     → crwl, yt-dlp, op, etc.
 PBC venv (Python scripts)    → {pbc}/{tool}/.venv/Scripts/python.exe
-pbc-definition.yaml          → Script inventory and capabilities
+pbc-tool-definition.yaml     → Script inventory and capabilities
 ```
 
-**Prefer existing scripts over writing new code.** Check `pbc-definition.yaml` first.
+**Prefer existing scripts over writing new code.** Check `pbc-tool-definition.yaml` first.
 
 ## Cross-PBC Constraints
 
@@ -88,12 +88,19 @@ If the user needs a capability that doesn't exist:
 
 1. Check if an existing PBC can be extended first
 2. If truly new, propose a PBC structure following the existing pattern:
-   - `CLAUDE.md` - AI instructions
-   - `README.md` - Human documentation
-   - `pbc-definition.yaml` - Capability manifest
-   - `scripts/` - Reusable scripts
-   - `workflows/` - Task patterns
-   - `docs/` - Tool documentation
+
+   ```text
+   pbc-{domain}/
+   ├── CLAUDE.md              # Domain router (points to tools)
+   ├── README.md              # Domain overview
+   └── tool-{toolname}/       # Tool implementation
+       ├── CLAUDE.md          # Detailed AI instructions
+       ├── README.md          # Human documentation
+       ├── pbc-tool-definition.yaml  # Tool manifest
+       ├── scripts/           # Reusable scripts
+       ├── workflows/         # Task patterns
+       └── docs/              # Tool documentation
+   ```
 
 ## Individual PBC Instructions
 
