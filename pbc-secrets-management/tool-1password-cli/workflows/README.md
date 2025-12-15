@@ -55,7 +55,7 @@ When you complete a project using a workflow:
 
 ## Related Documentation
 
-- [PBC Definition](../pbc-definition.yaml) - Formal capability specification
+- [PBC Tool Definition](../pbc-tool-definition.yaml) - Formal capability specification
 - [CLAUDE.md](../CLAUDE.md) - Instructions for Claude
 - [1Password CLI Docs](../docs/) - Reference documentation
 

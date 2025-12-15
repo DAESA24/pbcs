@@ -135,7 +135,7 @@ Each extraction can advance a workflow's maturity:
 ## Related Documentation
 
 - [Workflows README](../workflows/README.md) - Index of all workflow patterns
-- [PBC Definition](../pbc-definition.yaml) - Formal capability specification
+- [PBC Tool Definition](../pbc-tool-definition.yaml) - Formal capability specification
 - [CLAUDE.md](../CLAUDE.md) - Instructions for Claude
 
 ---

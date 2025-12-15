@@ -3,6 +3,7 @@
 ## When to Use This PBC
 
 Use this PBC when the user needs to:
+
 - Manage credentials securely using 1Password CLI
 - Inject secrets into environment variables
 - Use secret references (`op://` syntax)
@@ -13,6 +14,7 @@ Use this PBC when the user needs to:
 **Credentials must NEVER be visible to Claude Code.**
 
 All scripts that retrieve credentials must:
+
 1. Retrieve credentials silently (no stdout)
 2. Use credentials directly in operations
 3. Only output success/failure messages
@@ -31,17 +33,20 @@ print(f"Token: {token}")  # EXPOSES CREDENTIAL TO CLAUDE
 ## Quick Reference
 
 **Read a secret:**
+
 ```bash
 op read "op://vault/item/field"
 ```
 
 **Inject secrets into command:**
+
 ```bash
 op run --env-file .env.op -- python script.py
 ```
 
 **Secret reference syntax:**
-```
+
+```text
 op://vault/item/field
 op://Credentials-Workflow Tools/github-pat/credential
 ```
@@ -69,7 +74,7 @@ Drew uses two vaults:
 
 ## Scripts Inventory
 
-Check `pbc-definition.yaml` for available scripts:
+Check `pbc-tool-definition.yaml` for available scripts:
 
 | Script | Purpose |
 |--------|---------|

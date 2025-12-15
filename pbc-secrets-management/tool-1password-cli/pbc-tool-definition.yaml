@@ -1,0 +1,116 @@
+# PBC Tool Definition: 1Password CLI
+# Tool implementation within pbc-secrets-management
+
+tool_name: "1Password CLI"
+tool_id: "1password-cli"
+parent_pbc: "pbc-secrets-management"
+version: "0.1.0"
+status: "experimental"
+created: "2025-12-15"
+updated: "2025-12-15"
+
+description: >
+  Secure credential management using 1Password CLI. Provides patterns for
+  secret retrieval via op:// references, environment injection with op run,
+  and vault management. Credentials are never exposed to Claude Code.
+
+# How to invoke this tool
+access:
+  cli:
+    command: "op"
+    install_method: "winget install AgileBits.1Password.CLI"
+    example: 'op read "op://vault/item/field"'
+    version: "2.31.1"
+  note: "No Python venv - this is a standalone CLI tool"
+
+# Tool capabilities (what it can do)
+capabilities:
+  - "Secret retrieval via op:// references"
+  - "Environment variable injection (op run)"
+  - "Vault and item management"
+  - "Biometric authentication"
+  - "SSH key management"
+  - "Config file templating"
+
+# Vault architecture
+vaults:
+  - name: "Credentials-Workflow Tools"
+    purpose: "Personal tooling, cross-project credentials"
+    examples: ["google-calendar-personal", "github-pat"]
+  - name: "Credentials-Dev Project"
+    purpose: "Project-specific secrets"
+    examples: ["myapp-database", "clientsite-stripe"]
+
+# Reusable scripts - check here before writing new code
+scripts:
+  seed_1password_docs:
+    file: "scripts/seed_1password_docs.py"
+    status: "active"
+    description: "Discover 1Password CLI documentation URLs"
+    use_when: "Updating local documentation cache"
+    note: "Uses pbc-web-crawling/tool-crawl4ai venv"
+
+  crawl_1password_docs:
+    file: "scripts/crawl_1password_docs.py"
+    status: "active"
+    description: "Crawl and save docs as markdown with YAML front matter"
+    use_when: "Building local documentation for reference"
+    note: "Uses pbc-web-crawling/tool-crawl4ai venv"
+
+# Key documentation for specific tasks
+docs:
+  directory: "docs/"
+  by_task:
+    secret_references: "docs/secret-references.md"
+    best_practices: "docs/best-practices.md"
+    cli_read: "docs/cli-commands-read.md"
+    cli_run: "docs/cli-commands-run.md"
+    ssh_keys: "docs/ssh-keys.md"
+    config_files: "docs/secrets-config-files.md"
+    script_integration: "docs/secrets-scripts.md"
+
+# Workflow patterns
+workflows:
+  directory: "workflows/"
+  index: "workflows/README.md"
+  patterns:
+    - id: "credential-retrieval"
+      status: "stub"
+      file: "workflows/credential-retrieval.md"
+    - id: "environment-injection"
+      status: "stub"
+      file: "workflows/environment-injection.md"
+    - id: "project-setup"
+      status: "stub"
+      file: "workflows/project-setup.md"
+
+# How this tool connects to other PBCs
+composability:
+  role: "credential_management"
+  outputs:
+    - type: "credentials"
+      description: "Secure credential retrieval (never exposed to Claude)"
+    - type: "environment"
+      description: "Injected environment variables via op run"
+  used_by:
+    - "Any PBC or project requiring secure credentials"
+  cross_pbc_usage:
+    - pbc: "pbc-web-crawling"
+      usage: "Scripts use tool-crawl4ai venv for documentation crawling"
+
+# CRITICAL security constraints
+constraints:
+  - "Credentials must NEVER be visible to Claude Code"
+  - "Use op:// secret references, not raw values"
+  - "Scripts must retrieve credentials silently (no stdout)"
+  - "Only output success/failure messages, never credential values"
+
+# Security model reminder
+security_model: |
+  All scripts that retrieve credentials must:
+  1. Retrieve credentials silently (no stdout)
+  2. Use credentials directly in operations
+  3. Only output success/failure messages
+
+  WRONG: print(f"Token: {token}")
+  CORRECT: token = get_credential(...); api_call(token); print("Success")
