@@ -52,7 +52,7 @@ Available presets:
 
 ## Scripts Inventory
 
-Check `pbc-definition.yaml` for available scripts and their status.
+Check `pbc-tool-definition.yaml` for available scripts and their status.
 
 | Script | Status | Description |
 |--------|--------|-------------|

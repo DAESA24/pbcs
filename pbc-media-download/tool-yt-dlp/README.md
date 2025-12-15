@@ -85,7 +85,7 @@ yt-dlp --config-location configs/audio-only.conf https://youtube.com/watch?v=VID
 | `extract_metadata.py` | Stub | Get metadata JSON without downloading |
 | `extract_audio.py` | Stub | Audio extraction wrapper |
 
-See [pbc-definition.yaml](pbc-definition.yaml) for detailed script specifications.
+See [pbc-tool-definition.yaml](pbc-tool-definition.yaml) for detailed script specifications.
 
 ## Config Presets
 

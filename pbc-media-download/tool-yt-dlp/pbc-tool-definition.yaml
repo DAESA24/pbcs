@@ -1,0 +1,120 @@
+# PBC Tool Definition: yt-dlp
+# Tool implementation within pbc-media-download
+
+tool_name: "yt-dlp"
+tool_id: "yt-dlp"
+parent_pbc: "pbc-media-download"
+version: "0.1.0"
+status: "experimental"
+created: "2025-12-12"
+updated: "2025-12-15"
+
+description: >
+  Media downloading and extraction tool. Downloads video/audio from YouTube
+  and 700+ other sites, extracts metadata, and supports format conversion.
+  Designed to feed content into rag-pipeline for transcription and indexing.
+
+# How to invoke this tool
+access:
+  cli:
+    command: "yt-dlp"
+    install_method: "uv tool install yt-dlp"
+    example: "yt-dlp https://youtube.com/watch?v=VIDEO_ID"
+    global_config: "C:/Users/drewa/AppData/Roaming/yt-dlp/config.txt"
+  venv:
+    path: ".venv/Scripts/python.exe"
+    absolute: "C:/Users/drewa/pbcs/pbc-media-download/tool-yt-dlp/.venv/Scripts/python.exe"
+
+# External dependencies required
+dependencies:
+  ffmpeg:
+    purpose: "Media processing (merging, conversion, audio extraction)"
+    install: "winget install ffmpeg"
+    required: true
+
+# Tool capabilities (what it can do)
+capabilities:
+  - "Video/audio download from 700+ sites"
+  - "Format selection and conversion"
+  - "Metadata extraction (100+ fields)"
+  - "Playlist/channel batch downloads"
+  - "Subtitle extraction"
+  - "Thumbnail embedding"
+
+# Reusable scripts - check here before writing new code
+scripts:
+  download_youtube:
+    file: "scripts/download_youtube.py"
+    status: "active"
+    description: "Full YouTube download with format selection and metadata"
+    use_when: "Download videos for RAG pipeline, extract audio for transcription"
+
+  batch_download:
+    file: "scripts/batch_download.py"
+    status: "stub"
+    description: "Download from URL list file"
+    use_when: "Batch processing research videos, downloading course content"
+
+  extract_metadata:
+    file: "scripts/extract_metadata.py"
+    status: "stub"
+    description: "Get metadata JSON without downloading media"
+    use_when: "Pre-flight check before download, building video indexes"
+
+  extract_audio:
+    file: "scripts/extract_audio.py"
+    status: "stub"
+    description: "Audio extraction wrapper"
+    use_when: "Podcast/audio extraction for transcription"
+
+# Configuration presets
+configs:
+  directory: "configs/"
+  presets:
+    - file: "configs/audio-only.conf"
+      purpose: "Extract best audio as mp3"
+    - file: "configs/video-720p.conf"
+      purpose: "Video capped at 720p"
+    - file: "configs/video-1080p.conf"
+      purpose: "Video capped at 1080p"
+    - file: "configs/metadata-only.conf"
+      purpose: "Extract metadata JSON, no download"
+
+# Default output location
+output:
+  default_directory: "downloads/"
+  absolute: "C:/Users/drewa/pbcs/pbc-media-download/tool-yt-dlp/downloads/"
+  note: "Global config writes here by default; override with -o flag"
+
+# Key documentation for specific tasks
+docs:
+  external:
+    github: "https://github.com/yt-dlp/yt-dlp"
+    options: "https://github.com/yt-dlp/yt-dlp#usage-and-options"
+    supported_sites: "https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md"
+  internal:
+    global_config_setup: "GLOBAL_CONFIG_SETUP.md"
+
+# How this tool connects to other PBCs
+composability:
+  role: "content_acquisition"
+  outputs:
+    - type: "media_file"
+      description: "Downloaded video/audio files"
+    - type: "metadata"
+      description: "JSON metadata (title, duration, description, etc.)"
+    - type: "subtitles"
+      description: "SRT/VTT subtitle files (if available)"
+  feeds_into:
+    - pbc: "pbc-rag-pipeline"
+      interface: "Audio files for transcription -> text indexing"
+      status: "planned"
+  peers:
+    - pbc: "pbc-web-crawling"
+      relationship: "Both acquire content for rag-pipeline"
+
+# Tool-specific constraints
+constraints:
+  - "Fair use only - only download content you have rights to"
+  - "Respect intellectual property"
+  - "Rate limiting built-in - don't override delays"
