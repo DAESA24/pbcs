@@ -1,0 +1,848 @@
+{
+  "discovered_at": "2025-12-15T14:42:45.333103",
+  "source": "developer.1password.com",
+  "pattern": "*/docs/cli/*",
+  "total_urls": 120,
+  "urls": [
+    {
+      "url": "https://developer.1password.com/docs/cli/item-template-json/",
+      "title": "Item JSON template | 1Password Developer",
+      "description": "Learn how read the item JSON template format.",
+      "relevance_score": 1.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/secrets-template-syntax/",
+      "title": "1Password CLI Template Syntax | 1Password Developer",
+      "description": "Learn how to format secret references and variables in template files.",
+      "relevance_score": 0.5974791882104036,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/secret-reference-syntax/",
+      "title": "1Password CLI Secret Reference Syntax | 1Password Developer",
+      "description": "Learn how to create secret references to refer to secrets saved in your 1Password account.",
+      "relevance_score": 0.559977519693531,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/reference/management-commands/item/",
+      "title": "item | 1Password CLI | 1Password Developer",
+      "description": "Learn about the 1Password CLI 'item' command and its subcommands.",
+      "relevance_score": 0.43333800102789755,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/reference/management-commands/vault/",
+      "title": "vault | 1Password CLI | 1Password Developer",
+      "description": "Learn about the 1Password CLI 'vault' command and its subcommands.",
+      "relevance_score": 0.4134941467684297,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/secrets-environment-variables/",
+      "title": "Load secrets into the environment | 1Password Developer",
+      "description": "Learn how to provision secrets as environment variables with 1Password CLI, then use environment files to pass secrets to your applications.",
+      "relevance_score": 0.3573307746362386,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/environment-variables/",
+      "title": "1Password CLI environment variables | 1Password Developer",
+      "description": "You can use the following environment variables with 1Password CLI:",
+      "relevance_score": 0.35479326121951354,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/reference/commands/inject/",
+      "title": "inject | 1Password CLI | 1Password Developer",
+      "description": "Learn about the 1Password CLI 'inject' command.",
+      "relevance_score": 0.3474945241508139,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/reference/commands/run/",
+      "title": "run | 1Password CLI | 1Password Developer",
+      "description": "Learn about the 1Password CLI 'run' command.",
+      "relevance_score": 0.3474945241508139,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/app-integration-security/",
+      "title": "1Password app integration security | 1Password Developer",
+      "description": "Security model",
+      "relevance_score": 0.34403781844632225,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/vault-permissions/",
+      "title": "About vault permissions | 1Password Developer",
+      "description": "Learn about 1Password vault permission dependencies.",
+      "relevance_score": 0.31102626262979666,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/reference/commands/read/",
+      "title": "read | 1Password CLI | 1Password Developer",
+      "description": "Learn about the 1Password CLI 'read' command.",
+      "relevance_score": 0.306280413519737,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/security/",
+      "title": "About 1Password Shell Plugins security | 1Password Developer",
+      "description": "Authorization model",
+      "relevance_score": 0.29438394672743956,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/secret-references/",
+      "title": "Use secret references with 1Password CLI | 1Password Developer",
+      "description": "Learn how to replace plaintext secrets with secret references, then securely load your secrets from 1Password at runtime.",
+      "relevance_score": 0.2780088290293072,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/reference/",
+      "title": "1Password CLI reference | 1Password Developer",
+      "description": "If you're new to 1Password CLI, learn how to set it up and sign in to your account.",
+      "relevance_score": 0.2706867227316084,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/grant-revoke-vault-permissions/",
+      "title": "Grant and revoke vault permissions | 1Password Developer",
+      "description": "Learn how to use 1Password CLI to manage vault permissions for users and groups, so that everyone has access to the items they need.",
+      "relevance_score": 0.268507562127891,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/hashicorp-vault/",
+      "title": "Use 1Password to authenticate the Vault CLI with biometrics | 1Password Developer",
+      "description": "Sign in to the Vault CLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.2579295215613425,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/item-fields/",
+      "title": "Item fields | 1Password Developer",
+      "description": "When you use 1Password CLI to create items, you can customize your items with built-in and custom fields.",
+      "relevance_score": 0.24938649849980138,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/secrets-scripts/",
+      "title": "Load secrets into scripts | 1Password Developer",
+      "description": "Learn how to use secret references to securely load secrets in your scripts.",
+      "relevance_score": 0.23938664391239103,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/reference/update/",
+      "title": "Update to the latest version of 1Password CLI | 1Password Developer",
+      "description": "To make sure you're up to date with the latest features and security improvements, always use the latest version of 1Password CLI.",
+      "relevance_score": 0.2231488416968063,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/reference/management-commands/connect/",
+      "title": "connect | 1Password CLI | 1Password Developer",
+      "description": "Learn about the 1Password CLI 'connect' command and its subcommands.",
+      "relevance_score": 0.1650225143201298,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/reference/management-commands/document/",
+      "title": "document | 1Password CLI | 1Password Developer",
+      "description": "Learn about the 1Password CLI 'document' command and its subcommands.",
+      "relevance_score": 0.1650225143201298,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/reference/management-commands/events-api/",
+      "title": "events-api | 1Password CLI | 1Password Developer",
+      "description": "Learn about the 1Password CLI 'events-api' command and its subcommands.",
+      "relevance_score": 0.1650225143201298,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/reference/management-commands/group/",
+      "title": "group | 1Password CLI | 1Password Developer",
+      "description": "Learn about the 1Password CLI 'group' command and its subcommands.",
+      "relevance_score": 0.1650225143201298,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/reference/management-commands/service-account/",
+      "title": "service-account | 1Password CLI | 1Password Developer",
+      "description": "Learn about the 1Password CLI 'service-account' command and its subcommands.",
+      "relevance_score": 0.1650225143201298,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/reference/management-commands/user/",
+      "title": "user | 1Password CLI | 1Password Developer",
+      "description": "Learn about the 1Password CLI 'user' command and its subcommands.",
+      "relevance_score": 0.1650225143201298,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/item-create/",
+      "title": "Create items with 1Password CLI | 1Password Developer",
+      "description": "Learn how to create 1Password items on the command line.",
+      "relevance_score": 0.16296099747900525,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/item-edit/",
+      "title": "Edit items with 1Password CLI | 1Password Developer",
+      "description": "Learn how to use 1Password CLI to edit items on the command line.",
+      "relevance_score": 0.15707432146379807,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/use-multiple-accounts/",
+      "title": "Use 1Password CLI with multiple accounts | 1Password Developer",
+      "description": "Learn how to use multiple 1Password accounts on the command line with 1Password CLI.",
+      "relevance_score": 0.15338058762427403,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/get-started/",
+      "title": "Get started with 1Password CLI | 1Password Developer",
+      "description": "Learn how to install and sign in to 1Password CLI, then get started with commands and scripts to manage users, vaults, and items on the command line.",
+      "relevance_score": 0.13441526447151061,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/app-integration/",
+      "title": "Use the 1Password desktop app to sign in to 1Password CLI | 1Password Developer",
+      "description": "You can use the 1Password desktop app integration to quickly and securely sign in to 1Password CLI. The app integration allows you to:",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/best-practices/",
+      "title": "1Password CLI best practices | 1Password Developer",
+      "description": "1Password CLI brings 1Password to your terminal. The following are best practices we recommend when using 1Password CLI.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/config-directories/",
+      "title": "How 1Password CLI detects configuration directories | 1Password Developer",
+      "description": "1Password CLI configuration directories default to:",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/install-server/",
+      "title": "Install 1Password CLI on a server | 1Password Developer",
+      "description": "There are several different ways to install 1Password CLI on a server.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/recover-users/",
+      "title": "Recover accounts using 1Password CLI | 1Password Developer",
+      "description": "You can use 1Password CLI to begin the account recovery process for a family or team member if they can't sign in to or unlock 1Password. When you recover an account for someone:",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/provision-users/",
+      "title": "Add and remove team members with 1Password CLI | 1Password Developer",
+      "description": "Requirements",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/reference/commands/",
+      "title": "General commands | 1Password Developer",
+      "description": "",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/reference/commands/completion/",
+      "title": "completion | 1Password CLI | 1Password Developer",
+      "description": "Learn about the 1Password CLI 'completion' command.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/reference/commands/update/",
+      "title": "update | 1Password CLI | 1Password Developer",
+      "description": "Learn about the 1Password CLI 'update' command.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/reference/commands/whoami/",
+      "title": "whoami | 1Password CLI | 1Password Developer",
+      "description": "Learn about the 1Password CLI 'whoami' command.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/reference/commands/signout/",
+      "title": "signout | 1Password CLI | 1Password Developer",
+      "description": "Learn about the 1Password CLI 'signout' command.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/reference/management-commands/",
+      "title": "Management commands | 1Password Developer",
+      "description": "",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/reference/management-commands/plugin/",
+      "title": "plugin | 1Password CLI | 1Password Developer",
+      "description": "Learn about the 1Password CLI 'plugin' command.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/secrets-config-files/",
+      "title": "Load Secrets Into Config Files | 1Password Developer",
+      "description": "Learn how to use 1Password CLI to load secrets into config files without putting any plaintext secrets in code.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/",
+      "title": "1Password Shell Plugins | 1Password Developer",
+      "description": "Shell plugins allow you to use 1Password to sign in to any CLI with biometrics, including AWS, GitLab, GitHub, Laravel Forge, Stripe, and more.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/akamai/",
+      "title": "Use 1Password to authenticate the Akamai CLI with biometrics | 1Password Developer",
+      "description": "Sign in to the Akamai CLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/argo-cd/",
+      "title": "Use 1Password to authenticate Argo CD CLI with biometrics | 1Password Developer",
+      "description": "Sign in to Argo CD CLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/aws/",
+      "title": "Use 1Password to authenticate the AWS CLI with biometrics | 1Password Developer",
+      "description": "Sign in to the AWS CLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/aws-cdk-toolkit/",
+      "title": "Use 1Password to authenticate the AWS CDK Toolkit | 1Password Developer",
+      "description": "Authenticate the AWS CDK Toolkit with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/axiom/",
+      "title": "Use 1Password to securely authenticate Axiom CLI | 1Password Developer",
+      "description": "The Axiom CLI shell plugin allows you to use 1Password to securely authenticate Axiom CLI  with your fingerprint, Apple Watch, or system authentication, rather than storing your credentials in plaintext.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/binance/",
+      "title": "Use 1Password to securely authenticate Binance CLI | 1Password Developer",
+      "description": "The Binance shell plugin allows you to use 1Password to securely authenticate Binance CLI  with your fingerprint, Apple Watch, or system authentication, rather than storing your credentials in plaintext.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/cachix/",
+      "title": "Use 1Password to authenticate the Cachix CLI with biometrics | 1Password Developer",
+      "description": "Authenticate the Cachix CLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/circleci/",
+      "title": "Use 1Password to authenticate the CircleCI CLI with biometrics | 1Password Developer",
+      "description": "Sign in to the CircleCI CLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/cargo/",
+      "title": "Use 1Password to authenticate Cargo CLI with biometrics | 1Password Developer",
+      "description": "Sign in to Cargo CLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/civo/",
+      "title": "Use 1Password to securely authenticate Civo CLI | 1Password Developer",
+      "description": "The Civo CLI shell plugin allows you to use 1Password to securely authenticate Civo CLI  with your fingerprint, Apple Watch, or system authentication, rather than storing your credentials in plaintext.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/contribute/",
+      "title": "Build your own shell plugins (beta) | 1Password Developer",
+      "description": "If you don't see your favorite command-line tool listed in the 1Password Shell Plugin registry, you can write your own plugin.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/cloudflare-workers/",
+      "title": "Use 1Password to authenticate Wrangler with biometrics | 1Password Developer",
+      "description": "Sign in to the Cloudflare Workers CLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/databricks/",
+      "title": "Use 1Password to authenticate Databricks CLI with biometrics | 1Password Developer",
+      "description": "Authenticate Databricks CLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/crowdin/",
+      "title": "Use 1Password to securely authenticate Crowdin CLI | 1Password Developer",
+      "description": "The Crowdin CLI shell plugin allows you to use 1Password to securely authenticate Crowdin CLI  with your fingerprint, Apple Watch, or system authentication, rather than storing your credentials in plaintext.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/datadog/",
+      "title": "Use 1Password to authenticate Dogshell with biometrics | 1Password Developer",
+      "description": "Authenticate Dogshell with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/digitalocean/",
+      "title": "Use 1Password to authenticate doctl with biometrics | 1Password Developer",
+      "description": "Sign in to the DigitalOcean CLI with your fingerprint, Apple Watch, or system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/fastly/",
+      "title": "Use 1Password to authenticate Fastly CLI with biometrics | 1Password Developer",
+      "description": "Authenticate Fastly CLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/environments/",
+      "title": "Use 1Password Shell Plugins to switch between multiple environments | 1Password Developer",
+      "description": "Learn how to use shell plugins to switch between multiple environments, like production and development, without having to sign in or out between projects.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/flyctl/",
+      "title": "Use 1Password to securely authenticate Flyctl | 1Password Developer",
+      "description": "The Flyctl shell plugin allows you to use 1Password to securely authenticate Flyctl  with your fingerprint, Apple Watch, or system authentication, rather than storing your credentials in plaintext.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/fossa/",
+      "title": "Use 1Password to authenticate FOSSA CLI with biometrics | 1Password Developer",
+      "description": "Authenticate FOSSA CLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/github/",
+      "title": "Use 1Password to authenticate the GitHub CLI with biometrics | 1Password Developer",
+      "description": "Sign in to the GitHub CLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/gitea/",
+      "title": "Use 1Password to authenticate the Gitea CLI with biometrics | 1Password Developer",
+      "description": "Sign in to the Gitea CLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/gitlab/",
+      "title": "Use 1Password to authenticate the GitLab CLI with biometrics | 1Password Developer",
+      "description": "Sign in to the GitLab CLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/heroku/",
+      "title": "Use 1Password to authenticate the Heroku CLI with biometrics | 1Password Developer",
+      "description": "Sign in to the Heroku CLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/homebrew/",
+      "title": "Use 1Password to authenticate brew with biometrics | 1Password Developer",
+      "description": "Authenticate brew with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/hetzner-cloud/",
+      "title": "Use 1Password to authenticate hcloud with biometrics | 1Password Developer",
+      "description": "Sign in to the Heztner Cloud CLI with your fingerprint, Apple Watch, or system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/huggingface/",
+      "title": "Use 1Password to securely authenticate HuggingFace CLI | 1Password Developer",
+      "description": "The HuggingFace CLI shell plugin allows you to use 1Password to securely authenticate HuggingFace CLI  with your fingerprint, Apple Watch, or system authentication, rather than storing your credentials in plaintext.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/kaggle/",
+      "title": "Use 1Password to securely authenticate Kaggle CLI | 1Password Developer",
+      "description": "The Kaggle CLI shell plugin allows you to use 1Password to securely authenticate Kaggle CLI  with your fingerprint, Apple Watch, or system authentication, rather than storing your credentials in plaintext.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/influxdb/",
+      "title": "Use 1Password to securely authenticate InfluxDB | 1Password Developer",
+      "description": "The InfluxDB shell plugin allows you to use 1Password to securely authenticate InfluxDB  with your fingerprint, Apple Watch, or system authentication, rather than storing your credentials in plaintext.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/lacework/",
+      "title": "Use 1Password to authenticate the Lacework CLI with biometrics | 1Password Developer",
+      "description": "Sign in to the Lacework CLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/linode/",
+      "title": "Use 1Password to authenticate the Linode CLI with biometrics | 1Password Developer",
+      "description": "Sign in to the Linode CLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/laravel-vapor/",
+      "title": "Use 1Password to authenticate the Laravel Vapor CLI with biometrics | 1Password Developer",
+      "description": "Sign in to the Laravel Vapor CLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/laravel-forge/",
+      "title": "Use 1Password to authenticate the Laravel Forge CLI with biometrics | 1Password Developer",
+      "description": "Sign in to the Laravel Forge CLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/localstack/",
+      "title": "Use 1Password to securely authenticate LocalStack | 1Password Developer",
+      "description": "The LocalStack shell plugin allows you to use 1Password to securely authenticate LocalStack  with your fingerprint, Apple Watch, or system authentication, rather than storing your credentials in plaintext.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/mysql/",
+      "title": "Use 1Password to authenticate the MySQL CLI with biometrics | 1Password Developer",
+      "description": "Sign in to the MySQL CLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/mongodb-atlas/",
+      "title": "Use 1Password to securely authenticate MongoDB Atlas | 1Password Developer",
+      "description": "Sign in to the Atlas CLI for MongoDB with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/multiple-accounts/",
+      "title": "Use 1Password Shell Plugins to authenticate with multiple accounts | 1Password Developer",
+      "description": "Learn how to use shell plugins to authenticate with multiple accounts without having to sign in or out between projects.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/ngrok/",
+      "title": "Use 1Password to authenticate ngrok with biometrics | 1Password Developer",
+      "description": "Sign in to ngrok with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/nix/",
+      "title": "Use 1Password Shell Plugins with NixOS or home-manager | 1Password Developer",
+      "description": "Learn how to configure 1Password Shell Plugins when managing your shell configuration with NixOS or `home-manager`",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/oh-dear/",
+      "title": "Use 1Password to securely authenticate Oh Dear CLI | 1Password Developer",
+      "description": "The Oh Dear CLI shell plugin allows you to use 1Password to securely authenticate Oh Dear CLI  with your fingerprint, Apple Watch, or system authentication, rather than storing your credentials in plaintext.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/okta/",
+      "title": "Use 1Password to authenticate the Okta CLI with biometrics | 1Password Developer",
+      "description": "Sign in to the Okta CLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/openai-evals/",
+      "title": "Use 1Password to securely authenticate OpenAI Evals | 1Password Developer",
+      "description": "The OpenAI Evals shell plugins allow you to use 1Password to securely authenticate oaieval and oaievalset  with your fingerprint, Apple Watch, or system authentication, rather than storing your credentials in plaintext.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/pipedream/",
+      "title": "Use 1Password to securely authenticate Pipedream CLI | 1Password Developer",
+      "description": "The Pipedream CLI shell plugin allows you to use 1Password to securely authenticate Pipedream CLI  with your fingerprint, Apple Watch, or system authentication, rather than storing your credentials in plaintext.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/openai/",
+      "title": "Use 1Password to authenticate the OpenAI CLI with biometrics | 1Password Developer",
+      "description": "Sign in to the OpenAI CLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/postgresql/",
+      "title": "Use 1Password to authenticate psql with biometrics | 1Password Developer",
+      "description": "Sign in to psql with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/pulumi/",
+      "title": "Use 1Password to authenticate the Pulumi CLI with biometrics | 1Password Developer",
+      "description": "Sign in to the Pulumi CLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/readme/",
+      "title": "Use 1Password to authenticate the ReadMe CLI with biometrics | 1Password Developer",
+      "description": "Sign in to the ReadMe CLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/sentry/",
+      "title": "Use 1Password to authenticate the Sentry CLI with biometrics | 1Password Developer",
+      "description": "Sign in to the Sentry CLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/snowflake/",
+      "title": "Use 1Password to authenticate SnowSQL with biometrics | 1Password Developer",
+      "description": "Sign in to SnowSQL with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/snyk/",
+      "title": "Use 1Password to authenticate the Snyk CLI with biometrics | 1Password Developer",
+      "description": "Authenticate the Snyk CLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/sourcegraph/",
+      "title": "Use 1Password to authenticate the Sourcegraph CLI with biometrics | 1Password Developer",
+      "description": "Sign in to the Sourcegraph CLI with your fingerprint, Apple Watch, or system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/stripe/",
+      "title": "Use 1Password to authenticate the Stripe CLI with biometrics | 1Password Developer",
+      "description": "Sign in to the Stripe CLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/terraform/",
+      "title": "Use 1Password to securely authenticate Terraform | 1Password Developer",
+      "description": "Authenticate the Terraform CLI to AWS with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/test/",
+      "title": "Test shell plugins | 1Password Developer",
+      "description": "Learn how to test a shell plugin before using it.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/todoist/",
+      "title": "Use 1Password to securely authenticate Todoist CLI | 1Password Developer",
+      "description": "The Todoist CLI shell plugin allows you to use 1Password to securely authenticate Todoist CLI  with your fingerprint, Apple Watch, or system authentication, rather than storing your credentials in plaintext.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/treasure-data/",
+      "title": "Use 1Password to authenticate the Treasure Data CLI with biometrics | 1Password Developer",
+      "description": "Authenticate the Treasure Data Toolbelt with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/troubleshooting/",
+      "title": "1Password Shell Plugins troubleshooting | 1Password Developer",
+      "description": "Using shell plugins",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/tugboat/",
+      "title": "Use 1Password to authenticate the Tugboat CLI with biometrics | 1Password Developer",
+      "description": "Authenticate the Tugboat CLI with your fingerprint, Apple Watch, or system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/twilio/",
+      "title": "Use 1Password to authenticate the Twilio CLI with biometrics | 1Password Developer",
+      "description": "Sign in to the Twilio CLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/uninstall/",
+      "title": "Uninstall shell plugins | 1Password Developer",
+      "description": "Learn how to uninstall shell plugins.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/upstash/",
+      "title": "Use 1Password to securely authenticate Upstash CLI | 1Password Developer",
+      "description": "The Upstash CLI shell plugin allows you to use 1Password to securely authenticate Upstash CLI  with your fingerprint, Apple Watch, or system authentication, rather than storing your credentials in plaintext.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/vercel/",
+      "title": "Use 1Password to securely authenticate Vercel CLI | 1Password Developer",
+      "description": "The Vercel CLI shell plugin allows you to use 1Password to securely authenticate Vercel CLI  with your fingerprint, Apple Watch, or system authentication, rather than storing your credentials in plaintext.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/vultr/",
+      "title": "Use 1Password to authenticate Vultr CLI with biometrics | 1Password Developer",
+      "description": "Sign in to Vultr CLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/vertica/",
+      "title": "Use 1Password to securely authenticate Vertica CLI | 1Password Developer",
+      "description": "The Vertica CLI shell plugin allows you to use 1Password to securely authenticate Vertica CLI  with your fingerprint, Apple Watch, or system authentication, rather than storing your credentials in plaintext.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/yugabytedb/",
+      "title": "Use 1Password to securely authenticate YugabyteDB SQL Shell | 1Password Developer",
+      "description": "The YugabyteDB SQL Shell shell plugin allows you to use 1Password to securely authenticate YugabyteDB SQL Shell  with your fingerprint, Apple Watch, or system authentication, rather than storing your credentials in plaintext.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/zapier/",
+      "title": "Use 1Password to securely authenticate Zapier CLI | 1Password Developer",
+      "description": "The Zapier CLI shell plugin allows you to use 1Password to securely authenticate Zapier CLI  with your fingerprint, Apple Watch, or system authentication, rather than storing your credentials in plaintext.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/sign-in-sso/",
+      "title": "Unlock 1Password CLI with SSO | 1Password Developer",
+      "description": "This feature is only available as part of 1Password Unlock with SSO.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/shell-plugins/zendesk/",
+      "title": "Use 1Password to authenticate the Zendesk CLI with biometrics | 1Password Developer",
+      "description": "Sign in to ZCLI with your fingerprint, Apple Watch, or other system authentication. No more plaintext API keys or credentials in your home directory.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/ssh-keys/",
+      "title": "Manage SSH keys | 1Password Developer",
+      "description": "Learn how to use 1Password CLI to generate and retrieve SSH keys.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/sign-in-manually/",
+      "title": "Sign in to your 1Password account manually | 1Password Developer",
+      "description": "If you don't want to use the 1Password app to sign in to 1Password CLI, you can manually add and sign in to your accounts in the terminal.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/uninstall/",
+      "title": "Uninstall 1Password CLI | 1Password Developer",
+      "description": "Learn how to uninstall 1Password CLI.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/use-cases/",
+      "title": "1Password CLI use cases | 1Password Developer",
+      "description": "1Password CLI allows you to securely provision secrets in development environments, use scripts to manage items and provision team members at scale, and authenticate with biometrics in the terminal.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/user-states/",
+      "title": "User states | 1Password Developer",
+      "description": "When you fetch information about users with op user list or op user get, 1Password CLI returns each person's current account state.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/upgrade/",
+      "title": "Upgrade to 1Password CLI 2 | 1Password Developer",
+      "description": "Learn how to upgrade to 1Password CLI 2 from an earlier version of the command-line tool.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    },
+    {
+      "url": "https://developer.1password.com/docs/cli/verify/",
+      "title": "Verify the authenticity of 1Password CLI | 1Password Developer",
+      "description": "To confirm the authenticity of 1Password CLI, the tool and all its updates are digitally signed and offered exclusively by 1Password. Always get updates directly from 1Password, and always check to make sure that you have the latest version.",
+      "relevance_score": 0.0,
+      "status": "valid"
+    }
+  ]
+}
