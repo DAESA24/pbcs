@@ -64,13 +64,13 @@ ls -la "[path-to-doc-2]"
 ### 0.2 Verify Target Workflow Exists
 
 ```bash
-ls -la "C:/Users/drewa/pbcs/pbc-secrets-management/workflows/[primary-workflow].md"
+ls -la "C:/Users/drewa/pbcs/pbc-secrets-management/tool-1password-cli/workflows/[primary-workflow].md"
 ```
 
 ### 0.3 Create Extraction Output File
 
 ```bash
-touch "C:/Users/drewa/pbcs/pbc-secrets-management/workflow-evolution/extractions/[output-filename].md"
+touch "C:/Users/drewa/pbcs/pbc-secrets-management/tool-1password-cli/workflow-evolution/extractions/[output-filename].md"
 ```
 
 ---

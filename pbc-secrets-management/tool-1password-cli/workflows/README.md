@@ -2,7 +2,7 @@
 
 Reusable workflow patterns for common 1Password CLI use cases.
 
-- **Location:** `C:\Users\drewa\pbcs\pbc-secrets-management\workflows\`
+- **Location:** `C:\Users\drewa\pbcs\pbc-secrets-management\tool-1password-cli\workflows\`
 - **Last Updated:** 2025-12-15
 
 ## Workflow Index

@@ -2,7 +2,7 @@
 
 A feedback loop mechanism for continuously improving workflow patterns based on real-world 1Password CLI usage.
 
-- **Location:** `C:\Users\drewa\pbcs\pbc-secrets-management\workflow-evolution\`
+- **Location:** `C:\Users\drewa\pbcs\pbc-secrets-management\tool-1password-cli\workflow-evolution\`
 - **Created:** 2025-12-15
 - **Purpose:** Systematically capture learnings from projects and feed them back into workflow documents
 
