@@ -19,11 +19,15 @@ This is Drew Arnold's **Packaged Business Capabilities (PBCs)** monorepo - a col
 
 | User needs to... | Use this PBC | Read first |
 |------------------|--------------|------------|
-| Convert URLs to markdown | web-crawling-pbc | `web-crawling-pbc/CLAUDE.md` |
-| Crawl documentation sites | web-crawling-pbc | `web-crawling-pbc/CLAUDE.md` |
-| Extract structured data from web | web-crawling-pbc | `web-crawling-pbc/CLAUDE.md` |
-| Index content for RAG | rag-pipeline-pbc | (planned) |
-| Transcribe audio/video | media-transcription-pbc | (planned) |
+| Convert URLs to markdown | pbc-web-crawling | `pbc-web-crawling/CLAUDE.md` |
+| Crawl documentation sites | pbc-web-crawling | `pbc-web-crawling/CLAUDE.md` |
+| Extract structured data from web | pbc-web-crawling | `pbc-web-crawling/CLAUDE.md` |
+| Manage credentials securely | pbc-secrets-management | `pbc-secrets-management/CLAUDE.md` |
+| Inject secrets into env vars | pbc-secrets-management | `pbc-secrets-management/CLAUDE.md` |
+| Use secret references (op://) | pbc-secrets-management | `pbc-secrets-management/CLAUDE.md` |
+| Index content for RAG | pbc-rag-pipeline | (planned) |
+| Transcribe audio/video | pbc-media-transcription | (planned) |
+| Download video/audio from web | pbc-media-download | `pbc-media-download/CLAUDE.md` |
 
 3. Once you identify the PBC, read its `CLAUDE.md` for specific instructions
 
@@ -58,9 +62,9 @@ These apply to ALL PBCs:
 PBCs are designed to feed into each other:
 
 ```
-web-crawling-pbc ──────┐
-                       ├──► rag-pipeline-pbc ──► search/retrieval
-media-transcription-pbc┘
+pbc-web-crawling ──────┐
+                       ├──► pbc-rag-pipeline ──► search/retrieval
+pbc-media-transcription┘
 ```
 
 When a task spans multiple PBCs:
@@ -95,4 +99,6 @@ If the user needs a capability that doesn't exist:
 
 For specific task guidance, read the PBC's own CLAUDE.md:
 
-- [web-crawling-pbc/CLAUDE.md](web-crawling-pbc/CLAUDE.md) - Web scraping, URL to markdown, deep crawling
+- [pbc-web-crawling/CLAUDE.md](pbc-web-crawling/CLAUDE.md) - Web scraping, URL to markdown, deep crawling
+- [pbc-secrets-management/CLAUDE.md](pbc-secrets-management/CLAUDE.md) - Secure credential management, secret references, environment injection
+- [pbc-media-download/CLAUDE.md](pbc-media-download/CLAUDE.md) - Video/audio downloads, metadata extraction

@@ -19,18 +19,20 @@ A Packaged Business Capability (PBC) is a self-contained unit that:
 
 | PBC | Purpose | Status |
 |-----|---------|--------|
-| [web-crawling-pbc](web-crawling-pbc/) | URL to markdown, deep crawling, structured extraction | Experimental |
-| rag-pipeline-pbc | Indexing, semantic search, vector storage | Planned |
-| media-transcription-pbc | Audio/video to text | Planned |
+| [pbc-web-crawling](pbc-web-crawling/) | URL to markdown, deep crawling, structured extraction | Experimental |
+| [pbc-media-download](pbc-media-download/) | Video/audio downloads, metadata extraction | Experimental |
+| [pbc-secrets-management](pbc-secrets-management/) | Credential management, secret references | Experimental |
+| pbc-rag-pipeline | Indexing, semantic search, vector storage | Planned |
+| pbc-media-transcription | Audio/video to text | Planned |
 
 ## Architecture
 
 PBCs are designed to compose into pipelines:
 
 ```
-web-crawling-pbc ──────┐
-                       ├──► rag-pipeline-pbc (indexing, semantic search)
-media-transcription-pbc┘
+pbc-web-crawling ──────┐
+                       ├──► pbc-rag-pipeline (indexing, semantic search)
+pbc-media-transcription┘
 ```
 
 Each PBC has:
@@ -53,7 +55,7 @@ Each PBC has:
 Point the agent to the PBC's `CLAUDE.md` for instructions:
 
 ```
-Read C:\Users\drewa\pbcs\web-crawling-pbc\CLAUDE.md and help me crawl this documentation site.
+Read C:\Users\drewa\pbcs\pbc-web-crawling\CLAUDE.md and help me crawl this documentation site.
 ```
 
 ### For Humans
@@ -72,4 +74,4 @@ Each PBC evolves through use. After completing a project:
 
 ## Related Projects
 
-- [web-crawling-pbc-implementation-project](https://github.com/DAESA24/web-crawling-pbc-implementation-project) - Implementation docs and setup history for web-crawling-pbc
+- [web-crawling-pbc-implementation-project](https://github.com/DAESA24/web-crawling-pbc-implementation-project) - Implementation docs and setup history for pbc-web-crawling
