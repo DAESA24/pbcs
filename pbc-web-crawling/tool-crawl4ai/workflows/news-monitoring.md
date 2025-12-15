@@ -79,8 +79,8 @@ Use this workflow when you need to capture news articles or blog posts about a t
 ### Example: Capture Single Article
 
 ```bash
-PBC_VENV="C:/Users/drewa/pbcs/pbc-web-crawling/.venv/Scripts/python.exe"
-PBC_SCRIPTS="C:/Users/drewa/pbcs/pbc-web-crawling/scripts"
+PBC_VENV="C:/Users/drewa/pbcs/pbc-web-crawling/tool-crawl4ai/.venv/Scripts/python.exe"
+PBC_SCRIPTS="C:/Users/drewa/pbcs/pbc-web-crawling/tool-crawl4ai/scripts"
 
 "$PBC_VENV" "$PBC_SCRIPTS/url_to_markdown.py" \
     "https://techcrunch.com/2025/01/15/company-raises-funding" \

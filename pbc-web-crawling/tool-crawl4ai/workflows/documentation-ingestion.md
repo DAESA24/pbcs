@@ -105,8 +105,8 @@ curl -s https://docs.example.com/sitemap-0.xml
 ### Example: Traditional Documentation Site
 
 ```bash
-PBC_VENV="C:/Users/drewa/pbcs/pbc-web-crawling/.venv/Scripts/python.exe"
-PBC_SCRIPTS="C:/Users/drewa/pbcs/pbc-web-crawling/scripts"
+PBC_VENV="C:/Users/drewa/pbcs/pbc-web-crawling/tool-crawl4ai/.venv/Scripts/python.exe"
+PBC_SCRIPTS="C:/Users/drewa/pbcs/pbc-web-crawling/tool-crawl4ai/scripts"
 
 "$PBC_VENV" "$PBC_SCRIPTS/deep_crawl_docs.py" \
     "https://docs.example.com" \

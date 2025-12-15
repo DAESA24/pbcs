@@ -66,13 +66,13 @@ ls -la "[path-to-doc-2]"
 ### 0.2 Verify Target Workflow Exists
 
 ```bash
-ls -la "C:/Users/drewa/pbcs/pbc-web-crawling/workflows/[primary-workflow].md"
+ls -la "C:/Users/drewa/pbcs/pbc-web-crawling/tool-crawl4ai/workflows/[primary-workflow].md"
 ```
 
 ### 0.3 Create Extraction Output File
 
 ```bash
-touch "C:/Users/drewa/pbcs/pbc-web-crawling/workflow-evolution/extractions/[output-filename].md"
+touch "C:/Users/drewa/pbcs/pbc-web-crawling/tool-crawl4ai/workflow-evolution/extractions/[output-filename].md"
 ```
 
 ---

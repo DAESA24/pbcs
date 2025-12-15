@@ -2,7 +2,7 @@
 
 Reusable workflow patterns for common Crawl4AI use cases.
 
-- **Location:** `C:\Users\drewa\pbcs\pbc-web-crawling\workflows\`
+- **Location:** `C:\Users\drewa\pbcs\pbc-web-crawling\tool-crawl4ai\workflows\`
 - **Last Updated:** 2025-12-08
 
 ## Workflow Index

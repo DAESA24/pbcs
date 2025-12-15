@@ -156,10 +156,10 @@ research/[company-name]/
 
 ```bash
 # 1. Verify PBC venv accessible
-ls "C:\Users\drewa\pbcs\pbc-web-crawling\.venv\Scripts\python.exe"
+ls "C:\Users\drewa\pbcs\pbc-web-crawling\tool-crawl4ai\.venv\Scripts\python.exe"
 
 # 2. Verify scripts exist
-ls "C:\Users\drewa\pbcs\pbc-web-crawling\scripts\"
+ls "C:\Users\drewa\pbcs\pbc-web-crawling\tool-crawl4ai\scripts\"
 
 # 3. Check target URLs reachable
 curl -I https://[company].com
@@ -178,8 +178,8 @@ Each phase should be a self-contained bash block:
 echo "Starting [source] crawl..."
 
 # Define paths
-PBC_VENV="C:/Users/drewa/pbcs/pbc-web-crawling/.venv/Scripts/python.exe"
-PBC_SCRIPTS="C:/Users/drewa/pbcs/pbc-web-crawling/scripts"
+PBC_VENV="C:/Users/drewa/pbcs/pbc-web-crawling/tool-crawl4ai/.venv/Scripts/python.exe"
+PBC_SCRIPTS="C:/Users/drewa/pbcs/pbc-web-crawling/tool-crawl4ai/scripts"
 OUTPUT_DIR="[absolute path to output]"
 
 # Execute crawl

@@ -99,8 +99,8 @@ Keep an index file updated with what's been captured:
 ### Example: Add Single Reference Article
 
 ```bash
-PBC_VENV="C:/Users/drewa/pbcs/pbc-web-crawling/.venv/Scripts/python.exe"
-PBC_SCRIPTS="C:/Users/drewa/pbcs/pbc-web-crawling/scripts"
+PBC_VENV="C:/Users/drewa/pbcs/pbc-web-crawling/tool-crawl4ai/.venv/Scripts/python.exe"
+PBC_SCRIPTS="C:/Users/drewa/pbcs/pbc-web-crawling/tool-crawl4ai/scripts"
 
 "$PBC_VENV" "$PBC_SCRIPTS/url_to_markdown.py" \
     "https://example.com/great-article" \
