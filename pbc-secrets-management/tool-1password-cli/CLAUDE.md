@@ -78,26 +78,43 @@ Check `pbc-tool-definition.yaml` for available scripts:
 
 | Script | Purpose |
 |--------|---------|
+| `op_credential_utils.py` | Python utilities for credential retrieval and storage |
 | `seed_1password_docs.py` | Discover documentation URLs |
 | `crawl_1password_docs.py` | Crawl and save docs as markdown |
 
-These scripts use pbc-web-crawling/tool-crawl4ai's venv for Crawl4AI.
+The documentation scripts use pbc-web-crawling/tool-crawl4ai's venv for Crawl4AI.
 
 ## Python Integration Pattern
 
-```python
-import subprocess
+Use the `op_credential_utils.py` module for all credential operations:
 
-def get_credential(secret_ref: str) -> str:
-    """Retrieve a credential from 1Password. NEVER print the return value."""
-    result = subprocess.run(
-        ["op", "read", secret_ref],
-        capture_output=True,
-        text=True,
-        check=True
-    )
-    return result.stdout.strip()
+```python
+import sys
+sys.path.insert(0, r"C:\Users\drewa\pbcs\pbc-secrets-management\tool-1password-cli\scripts")
+from op_credential_utils import get_field, store_field, field_exists, check_signed_in
+
+# Retrieve a credential (vault auto-detected based on working directory)
+token = get_field("google-calendar-personal", "access-token")
+
+# Store a credential
+store_field("google-calendar-personal", "access-token", new_token)
+
+# Check if field exists
+if field_exists("item-name", "field-name"):
+    # Field exists
+    pass
 ```
+
+**Available functions:**
+
+| Function | Purpose |
+|----------|---------|
+| `get_field(item, field, vault?)` | Retrieve a field value (returns None if not found) |
+| `store_field(item, field, value, vault?)` | Store/update a field in existing item |
+| `field_exists(item, field, vault?)` | Check if field exists |
+| `get_credential(secret_ref)` | Retrieve using full `op://` reference |
+| `check_signed_in()` | Check if 1Password CLI is authenticated |
+| `get_default_vault()` | Get auto-detected vault name |
 
 ## Essential CLI Commands
 

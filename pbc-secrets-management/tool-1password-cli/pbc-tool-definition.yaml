@@ -43,6 +43,26 @@ vaults:
 
 # Reusable scripts - check here before writing new code
 scripts:
+  op_credential_utils:
+    file: "scripts/op_credential_utils.py"
+    status: "active"
+    description: "Python utilities for 1Password credential retrieval and storage"
+    use_when: "Any Python script needs to retrieve or store credentials from 1Password"
+    functions:
+      - name: "get_field(item, field, vault?)"
+        description: "Retrieve a field value from 1Password item"
+      - name: "store_field(item, field, value, vault?)"
+        description: "Store/update a field in existing 1Password item"
+      - name: "field_exists(item, field, vault?)"
+        description: "Check if a field exists without retrieving its value"
+      - name: "get_credential(secret_ref)"
+        description: "Retrieve using full op:// reference"
+      - name: "check_signed_in()"
+        description: "Check if 1Password CLI is authenticated"
+      - name: "get_default_vault()"
+        description: "Auto-detect vault based on working directory"
+    note: "Vault auto-detects: work/dev/* -> Credentials-Dev Project, else -> Credentials-Workflow Tools"
+
   seed_1password_docs:
     file: "scripts/seed_1password_docs.py"
     status: "active"

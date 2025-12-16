@@ -60,23 +60,40 @@ op read "op://vault/item/private_key?ssh-format=openssh"
 
 ### Step 3: Python Integration
 
+Use the `op_credential_utils.py` module:
+
 ```python
-import subprocess
+import sys
+sys.path.insert(0, r"C:\Users\drewa\pbcs\pbc-secrets-management\tool-1password-cli\scripts")
+from op_credential_utils import get_field, store_field, field_exists, check_signed_in
 
-def get_credential(secret_ref: str) -> str:
-    """NEVER print or log the return value."""
-    result = subprocess.run(
-        ["op", "read", secret_ref],
-        capture_output=True,
-        text=True,
-        check=True
-    )
-    return result.stdout.strip()
+# Check auth status first
+if not check_signed_in():
+    print("1Password CLI not signed in. Run 'op signin' first.")
+    sys.exit(1)
 
-# Usage
-token = get_credential("op://Credentials-Workflow Tools/github-pat/credential")
-# Use token directly in API calls - NEVER print it
+# Retrieve a credential (vault auto-detected based on working directory)
+token = get_field("github-pat", "credential")
+
+# Or specify vault explicitly
+token = get_field("github-pat", "credential", vault="Credentials-Workflow Tools")
+
+# Check if a field exists before retrieving
+if field_exists("google-calendar-personal", "access-token"):
+    token = get_field("google-calendar-personal", "access-token")
+
+# Store a credential (after OAuth flow, for example)
+store_field("google-calendar-personal", "access-token", new_token)
+
+# Use credential directly in API calls - NEVER print it
+response = api_call(token)
+print("API call successful")
 ```
+
+**Vault auto-detection:**
+
+- `work/dev/*` → `Credentials-Dev Project`
+- Otherwise → `Credentials-Workflow Tools`
 
 ## Common Pitfalls
 

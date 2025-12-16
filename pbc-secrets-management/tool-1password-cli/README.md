@@ -74,40 +74,48 @@ op://Credentials-Workflow Tools/github-pat/credential
 
 ## Python Integration
 
+Use the `op_credential_utils.py` module for credential retrieval in Python scripts:
+
 ```python
-import subprocess
+import sys
+sys.path.insert(0, r"C:\Users\drewa\pbcs\pbc-secrets-management\tool-1password-cli\scripts")
+from op_credential_utils import get_field, store_field, field_exists, check_signed_in
 
-def get_credential(secret_ref: str) -> str:
-    """
-    Retrieve a credential from 1Password.
+# Check if signed in first
+if not check_signed_in():
+    print("Please run 'op signin' first")
+    sys.exit(1)
 
-    Args:
-        secret_ref: Secret reference in format op://vault/item/field
+# Retrieve a credential (vault auto-detected based on working directory)
+token = get_field("google-calendar-personal", "access-token")
 
-    Returns:
-        The credential value (NEVER print or log this)
-    """
-    result = subprocess.run(
-        ["op", "read", secret_ref],
-        capture_output=True,
-        text=True,
-        check=True
-    )
-    return result.stdout.strip()
+# Check if a field exists
+if not field_exists("google-calendar-personal", "refresh-token"):
+    print("No refresh token found - need to re-authenticate")
 
-# Usage
-token = get_credential("op://Credentials-Workflow Tools/github-pat/credential")
-# Use token directly - never print it
+# Store a credential (item must already exist)
+store_field("google-calendar-personal", "access-token", new_token)
+
+# Use credential directly - NEVER print it
+response = api_call(token)
+print("API call successful")  # Only status messages
 ```
+
+**Vault auto-detection:**
+
+- Running from `work/dev/*` → uses `Credentials-Dev Project`
+- Running from anywhere else → uses `Credentials-Workflow Tools`
+- Override with explicit `vault=` parameter when needed
 
 ## Scripts
 
 | Script | Status | Description |
 |--------|--------|-------------|
+| `op_credential_utils.py` | Active | Python utilities for credential retrieval and storage |
 | `seed_1password_docs.py` | Active | Discover 1Password CLI documentation URLs |
 | `crawl_1password_docs.py` | Active | Crawl and save docs as markdown with YAML front matter |
 
-These scripts use pbc-web-crawling/tool-crawl4ai's venv for Crawl4AI functionality.
+The documentation scripts use pbc-web-crawling/tool-crawl4ai's venv for Crawl4AI functionality.
 
 ## Workflows
 

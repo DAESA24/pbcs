@@ -1,9 +1,16 @@
 """
 URL Seeding Script for 1Password CLI Documentation
 
-Discovers all CLI documentation URLs from developer.1password.com
-using Crawl4AI's AsyncUrlSeeder. Outputs a JSON file for review
-before crawling.
+Type: Maintenance
+    This is a maintenance script for the PBC itself. Use it to refresh the local
+    documentation corpus after 1Password CLI tool upgrades or when checking for
+    new/updated documentation pages.
+
+Purpose:
+    Discovers all CLI documentation URLs from developer.1password.com using
+    Crawl4AI's AsyncUrlSeeder. Outputs a JSON file for review before crawling.
+    Run this as the first step when refreshing documentation, then follow up
+    with crawl_1password_docs.py to fetch the actual content.
 
 Usage:
     python seed_1password_docs.py

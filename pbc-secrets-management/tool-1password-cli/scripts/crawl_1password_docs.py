@@ -1,11 +1,18 @@
 """
 Crawl Script for 1Password CLI Documentation
 
-Reads URLs from discovery JSON and crawls each page,
-saving as markdown files with YAML front matter.
+Type: Maintenance
+    This is a maintenance script for the PBC itself. Use it after running
+    seed_1password_docs.py to fetch and store documentation locally. Typically
+    run after 1Password CLI tool upgrades to refresh the local docs corpus.
 
-Includes URL filtering to exclude individual shell plugin pages
-while keeping overview/security documentation.
+Purpose:
+    Reads URLs from discovery JSON and crawls each page, saving as markdown
+    files with YAML front matter. The front matter includes category, keywords,
+    and relevance tags useful for search and RAG indexing.
+
+    Includes URL filtering to exclude individual shell plugin pages while
+    keeping overview/security documentation.
 
 Usage:
     python crawl_1password_docs.py [--input discovery.json] [--output-dir ../docs]
