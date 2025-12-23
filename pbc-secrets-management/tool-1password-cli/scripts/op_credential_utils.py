@@ -78,11 +78,20 @@ def check_signed_in() -> bool:
 
     Returns:
         True if signed in, False otherwise
+
+    Note:
+        On Windows, uses shell=True to inherit the terminal context required
+        for 1Password desktop app integration (biometric/Windows Hello auth).
     """
+    # On Windows, shell=True is required for 1Password desktop app integration
+    # to recognize the session and trigger biometric auth if needed
+    use_shell = sys.platform == "win32"
+
     result = subprocess.run(
-        ["op", "whoami"],
+        ["op", "whoami"] if not use_shell else "op whoami",
         capture_output=True,
-        text=True
+        text=True,
+        shell=use_shell
     )
     return result.returncode == 0
 
@@ -125,12 +134,16 @@ def get_credential(secret_ref: str) -> Optional[str]:
     Raises:
         RuntimeError: If 1Password CLI is not signed in or other errors occur
     """
+    # On Windows, shell=True is required for 1Password desktop app integration
+    use_shell = sys.platform == "win32"
+
     try:
         result = subprocess.run(
-            ["op", "read", secret_ref],
+            ["op", "read", secret_ref] if not use_shell else f'op read "{secret_ref}"',
             capture_output=True,
             text=True,
-            check=True
+            check=True,
+            shell=use_shell
         )
         return result.stdout.strip()
     except subprocess.CalledProcessError as e:
@@ -200,13 +213,28 @@ def store_field(item: str, field: str, value: str, vault: Optional[str] = None) 
     if vault is None:
         vault = get_default_vault()
 
+    # On Windows, shell=True is required for 1Password desktop app integration
+    use_shell = sys.platform == "win32"
+
     try:
-        subprocess.run(
-            ["op", "item", "edit", item, f"{field}={value}", "--vault", vault],
-            capture_output=True,
-            text=True,
-            check=True
-        )
+        if use_shell:
+            # For shell=True, construct the command as a string
+            # Note: value may contain special characters, so we use subprocess with stdin instead
+            cmd = f'op item edit "{item}" "{field}={value}" --vault "{vault}"'
+            subprocess.run(
+                cmd,
+                capture_output=True,
+                text=True,
+                check=True,
+                shell=True
+            )
+        else:
+            subprocess.run(
+                ["op", "item", "edit", item, f"{field}={value}", "--vault", vault],
+                capture_output=True,
+                text=True,
+                check=True
+            )
         return True
     except subprocess.CalledProcessError as e:
         _handle_op_error(e)
@@ -423,14 +451,27 @@ def create_oauth_client_item(
     template = _build_oauth_item_template(item_title, credentials, vault)
 
     # Create the item via stdin (secrets never appear in command line)
+    # On Windows, shell=True is required for 1Password desktop app integration
+    use_shell = sys.platform == "win32"
+
     try:
-        result = subprocess.run(
-            ["op", "item", "create", "-", "--format", "json"],
-            input=json.dumps(template),
-            capture_output=True,
-            text=True,
-            check=True
-        )
+        if use_shell:
+            result = subprocess.run(
+                'op item create - --format json',
+                input=json.dumps(template),
+                capture_output=True,
+                text=True,
+                check=True,
+                shell=True
+            )
+        else:
+            result = subprocess.run(
+                ["op", "item", "create", "-", "--format", "json"],
+                input=json.dumps(template),
+                capture_output=True,
+                text=True,
+                check=True
+            )
     except subprocess.CalledProcessError as e:
         # Don't delete the file if creation failed
         _handle_op_error(e)
