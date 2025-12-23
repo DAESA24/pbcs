@@ -46,3 +46,8 @@ logs/
 
 # Crawl4AI specific
 .crawl4ai/
+
+# BMAD framework (external toolkit)
+_bmad/
+.claude/commands/bmad/
+.gemini/
