@@ -46,6 +46,7 @@ logs/
 
 # Crawl4AI specific
 .crawl4ai/
+browser-profiles/
 
 # BMAD framework (external toolkit)
 _bmad/
