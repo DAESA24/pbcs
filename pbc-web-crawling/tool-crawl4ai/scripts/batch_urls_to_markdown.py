@@ -10,6 +10,10 @@ Usage:
 Examples:
     python batch_urls_to_markdown.py urls.txt --output-dir ./output
     python batch_urls_to_markdown.py --urls https://a.com https://b.com -o ./output
+
+    # For JavaScript-rendered sites (React, Vue, etc.)
+    python batch_urls_to_markdown.py urls.txt -o ./output --js-render
+    python batch_urls_to_markdown.py urls.txt -o ./output --wait-for "css:.content" --delay 2.0
 """
 
 import argparse
@@ -47,7 +51,10 @@ def get_filename_from_result(result, index: int) -> str:
 async def batch_urls_to_markdown(
     urls: list[str],
     output_dir: str,
-    max_concurrent: int = 5
+    max_concurrent: int = 5,
+    js_render: bool = False,
+    wait_for: str = None,
+    delay: float = 0.0
 ) -> dict:
     """
     Convert multiple URLs to markdown files.
@@ -56,6 +63,9 @@ async def batch_urls_to_markdown(
         urls: List of URLs to crawl
         output_dir: Directory to save markdown files
         max_concurrent: Maximum concurrent crawls
+        js_render: Enable JavaScript rendering mode (for SPAs)
+        wait_for: CSS selector to wait for before capturing
+        delay: Delay in seconds before capturing content
 
     Returns:
         Dict with 'successful' and 'failed' lists
@@ -65,14 +75,36 @@ async def batch_urls_to_markdown(
 
     browser_config = BrowserConfig()
 
-    run_config = CrawlerRunConfig(
-        word_count_threshold=10,
-        exclude_external_links=True,
-        remove_overlay_elements=True,
-        excluded_tags=['nav', 'footer', 'header', 'aside'],
-        cache_mode=CacheMode.BYPASS,
-        stream=True
-    )
+    # Build run config with optional JS rendering support
+    config_kwargs = {
+        "word_count_threshold": 10,
+        "exclude_external_links": True,
+        "excluded_tags": ['nav', 'footer', 'header', 'aside'],
+        "cache_mode": CacheMode.BYPASS,
+        "stream": True
+    }
+
+    # JavaScript rendering options
+    if js_render:
+        config_kwargs["wait_until"] = "networkidle"
+        config_kwargs["scan_full_page"] = True
+        config_kwargs["delay_before_return_html"] = delay if delay > 0 else 1.0
+        config_kwargs["magic"] = True  # Auto-handle popups/modals for JS sites
+        # Note: remove_overlay_elements=True can break some JS sites, so we don't use it with js_render
+        print("JavaScript rendering mode enabled", file=sys.stderr)
+    else:
+        # Only use overlay removal for static sites
+        config_kwargs["remove_overlay_elements"] = True
+
+    if wait_for:
+        config_kwargs["wait_for"] = wait_for
+        config_kwargs["wait_for_timeout"] = 15000  # 15 seconds
+        print(f"Waiting for selector: {wait_for}", file=sys.stderr)
+
+    if delay > 0 and not js_render:
+        config_kwargs["delay_before_return_html"] = delay
+
+    run_config = CrawlerRunConfig(**config_kwargs)
 
     rate_limiter = RateLimiter(
         base_delay=(0.5, 1.5),
@@ -173,6 +205,21 @@ def main():
         default=5,
         help='Maximum concurrent crawls (default: 5)'
     )
+    parser.add_argument(
+        '--js-render',
+        action='store_true',
+        help='Enable JavaScript rendering mode for SPAs (React, Vue, etc.)'
+    )
+    parser.add_argument(
+        '--wait-for',
+        help='CSS selector to wait for before capturing (e.g., "css:.content")'
+    )
+    parser.add_argument(
+        '--delay',
+        type=float,
+        default=0.0,
+        help='Delay in seconds before capturing content (default: 0)'
+    )
 
     args = parser.parse_args()
 
@@ -194,7 +241,10 @@ def main():
         results = asyncio.run(batch_urls_to_markdown(
             urls=urls,
             output_dir=args.output_dir,
-            max_concurrent=args.concurrent
+            max_concurrent=args.concurrent,
+            js_render=args.js_render,
+            wait_for=args.wait_for,
+            delay=args.delay
         ))
 
         # Summary

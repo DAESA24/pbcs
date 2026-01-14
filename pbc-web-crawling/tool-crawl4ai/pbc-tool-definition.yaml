@@ -53,6 +53,12 @@ scripts:
     description: "Crawl nested documentation sites"
     use_when: "Documentation site capture, feeding docs to rag-pipeline"
 
+  discover_urls:
+    file: "scripts/discover_urls.py"
+    status: "active"
+    description: "Discover URLs from sitemap/Common Crawl before crawling"
+    use_when: "Pre-crawl discovery, filtering docs by pattern, relevance scoring"
+
 # Configuration presets
 configs:
   directory: "configs/"
