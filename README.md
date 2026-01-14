@@ -20,7 +20,7 @@ A Packaged Business Capability (PBC) is a self-contained unit that:
 | PBC | Purpose | Status |
 |-----|---------|--------|
 | [pbc-web-crawling](pbc-web-crawling/) | URL to markdown, deep crawling, structured extraction | Experimental |
-| [pbc-media-download](pbc-media-download/) | Video/audio downloads, metadata extraction | Experimental |
+| [pbc-media-ingestion](pbc-media-ingestion/) | Video/audio downloads, metadata extraction | Experimental |
 | [pbc-secrets-management](pbc-secrets-management/) | Credential management, secret references | Experimental |
 | pbc-rag-pipeline | Indexing, semantic search, vector storage | Planned |
 | pbc-media-transcription | Audio/video to text | Planned |

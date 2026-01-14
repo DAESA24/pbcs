@@ -27,7 +27,7 @@ This is Drew Arnold's **Packaged Business Capabilities (PBCs)** monorepo - a col
 | Use secret references (op://) | pbc-secrets-management | `pbc-secrets-management/tool-1password-cli/CLAUDE.md` |
 | Index content for RAG | pbc-rag-pipeline | (planned) |
 | Transcribe audio/video | pbc-media-transcription | (planned) |
-| Download video/audio from web | pbc-media-download | `pbc-media-download/tool-yt-dlp/CLAUDE.md` |
+| Download video/audio from web | pbc-media-ingestion | `pbc-media-ingestion/tool-yt-dlp/CLAUDE.md` |
 
 3. Once you identify the PBC, read its `CLAUDE.md` for specific instructions
 
@@ -108,4 +108,4 @@ For specific task guidance, read the PBC's own CLAUDE.md:
 
 - [pbc-web-crawling/tool-crawl4ai/CLAUDE.md](pbc-web-crawling/tool-crawl4ai/CLAUDE.md) - Web scraping, URL to markdown, deep crawling
 - [pbc-secrets-management/tool-1password-cli/CLAUDE.md](pbc-secrets-management/tool-1password-cli/CLAUDE.md) - Secure credential management, secret references, environment injection
-- [pbc-media-download/tool-yt-dlp/CLAUDE.md](pbc-media-download/tool-yt-dlp/CLAUDE.md) - Video/audio downloads, metadata extraction
+- [pbc-media-ingestion/tool-yt-dlp/CLAUDE.md](pbc-media-ingestion/tool-yt-dlp/CLAUDE.md) - Video/audio downloads, metadata extraction
