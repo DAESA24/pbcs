@@ -1,0 +1,12 @@
+﻿https://chidiwilliams.github.io/buzz/docs
+https://chidiwilliams.github.io/buzz/docs/cli
+https://chidiwilliams.github.io/buzz/docs/faq
+https://chidiwilliams.github.io/buzz/docs/installation
+https://chidiwilliams.github.io/buzz/docs/preferences
+https://chidiwilliams.github.io/buzz/docs/usage/edit_and_resize
+https://chidiwilliams.github.io/buzz/docs/usage/file_import
+https://chidiwilliams.github.io/buzz/docs/usage/live_recording
+https://chidiwilliams.github.io/buzz/docs/usage/speaker_identification
+https://chidiwilliams.github.io/buzz/docs/usage/transcription_viewer
+https://chidiwilliams.github.io/buzz/docs/usage/translations
+https://chidiwilliams.github.io/buzz/

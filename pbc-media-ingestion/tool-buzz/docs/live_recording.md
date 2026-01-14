@@ -1,0 +1,59 @@
+# Live Recording | Buzz
+
+- **Source:** https://chidiwilliams.github.io/buzz/docs/usage/live_recording
+- **Status:** 200
+- **Validation:** PASS
+
+---
+
+[Skip to main content](https://chidiwilliams.github.io/buzz/docs/usage/live_recording#__docusaurus_skipToContent_fallback)
+On this page
+To start a live recording:
+  * Select a recording task, language, quality, and microphone.
+  * Click Record.
+
+
+> **Note:** Transcribing audio using the default Whisper model is resource-intensive. Consider using the Whisper.cpp. Since 1.3.0 it supports GPU acceleration, if the model fits in GPU memory. Use smaller models for real-time performance.
+Field | Options | Default | Description  
+---|---|---|---  
+Task | "Transcribe", "Translate to English" | "Transcribe" | "Transcribe" converts the input audio into text in the selected language, while "Translate to English" converts it into text in English.  
+Language | See  | "Detect Language" | "Detect Language" will try to detect the spoken language in the audio based on the first few seconds. However, selecting a language is recommended (if known) as it will improve transcription quality in many cases.  
+Microphone | [Available system microphones] | [Default system microphone] | Microphone for recording input audio.  
+**Presentation Window** Since 1.4.2 Buzz has an easy to use presentation window you can use to show live transcriptions during events and presentations. To open it start the recording and new options for the `Presentation window` will appear.
+### Record audio playing from computer (macOS)[​](https://chidiwilliams.github.io/buzz/docs/usage/live_recording#record-audio-playing-from-computer-macos "Direct link to Record audio playing from computer \(macOS\)")
+To record audio playing from an application on your computer, you may install an audio loopback driver (a program that lets you create virtual audio devices). The rest of this guide will use 
+  1. Install 
+```
+brew install blackhole-2ch  
+
+```
+
+  2. Open Audio MIDI Setup from Spotlight or from `/Applications/Utilities/Audio Midi Setup.app`.
+![Open Audio MIDI Setup from Spotlight](https://existential.audio/howto/img/spotlight.png)
+  3. Click the '+' icon at the lower left corner and select 'Create Multi-Output Device'.
+![Create multi-output device](https://existential.audio/howto/img/createmulti-output.png)
+  4. Add your default speaker and BlackHole to the multi-output device.
+![Screenshot of multi-output device](https://existential.audio/howto/img/multi-output.png)
+  5. Select this multi-output device as your speaker (application or system-wide) to play audio into BlackHole.
+  6. Open Buzz, select BlackHole as your microphone, and record as before to see transcriptions from the audio playing through BlackHole.
+
+
+### Record audio playing from computer (Windows)[​](https://chidiwilliams.github.io/buzz/docs/usage/live_recording#record-audio-playing-from-computer-windows "Direct link to Record audio playing from computer \(Windows\)")
+To transcribe system audio you need to configure virtual audio device and connect output from the applications you whant to transcribe to this virtual speaker. After that you can select it as source in the Buzz.
+  1. Install 
+  2. Configure using Windows Sound settings. Right-click on the speaker icon in the system tray and select "Open Sound settings". In the "Choose your output device" dropdown select "CABLE Input" to send all system sound to the virtual device or use "Advanced sound options" to select application that will output their sound to this device.
+
+
+### Record audio playing from computer (Linux)[​](https://chidiwilliams.github.io/buzz/docs/usage/live_recording#record-audio-playing-from-computer-linux "Direct link to Record audio playing from computer \(Linux\)")
+As described on 
+Overall steps:
+  1. Launch application that will produce the sound you want to transcribe and start the playback. For example start a video in a media player. 
+  2. Launch Buzz and open Live recording screen, so you see the settings.
+  3. Configure sound routing from the application you want to transcribe sound from to Buzz in `Recording tab` of the PulseAudio Volume Control (`pavucontrol`).
+
+
+  * [Record audio playing from computer (macOS)](https://chidiwilliams.github.io/buzz/docs/usage/live_recording#record-audio-playing-from-computer-macos)
+  * [Record audio playing from computer (Windows)](https://chidiwilliams.github.io/buzz/docs/usage/live_recording#record-audio-playing-from-computer-windows)
+  * [Record audio playing from computer (Linux)](https://chidiwilliams.github.io/buzz/docs/usage/live_recording#record-audio-playing-from-computer-linux)
+
+
