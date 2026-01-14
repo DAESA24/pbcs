@@ -21,7 +21,7 @@ yt-dlp https://youtube.com/watch?v=VIDEO_ID
 **PBC venv (Python scripts):**
 
 ```bash
-/c/Users/drewa/pbcs/pbc-media-download/tool-yt-dlp/.venv/Scripts/python.exe script.py
+/c/Users/drewa/pbcs/pbc-media-ingestion/tool-yt-dlp/.venv/Scripts/python.exe script.py
 ```
 
 ## Common CLI Commands
@@ -40,7 +40,7 @@ yt-dlp https://youtube.com/watch?v=VIDEO_ID
 Use config presets for common operations:
 
 ```bash
-yt-dlp --config-location /c/Users/drewa/pbcs/pbc-media-download/tool-yt-dlp/configs/audio-only.conf <url>
+yt-dlp --config-location /c/Users/drewa/pbcs/pbc-media-ingestion/tool-yt-dlp/configs/audio-only.conf <url>
 ```
 
 Available presets:
@@ -63,7 +63,7 @@ Check `pbc-tool-definition.yaml` for available scripts and their status.
 
 ## Default Output Location
 
-**Global Default:** Downloaded files go to: `/c/Users/drewa/pbcs/pbc-media-download/tool-yt-dlp/downloads/`
+**Global Default:** Downloaded files go to: `/c/Users/drewa/pbcs/pbc-media-ingestion/tool-yt-dlp/downloads/`
 
 The global yt-dlp configuration (at `%APPDATA%\yt-dlp\config.txt`) is configured to use this directory by default. This means:
 

@@ -1,9 +1,9 @@
 # PBC Tool Definition: yt-dlp
-# Tool implementation within pbc-media-download
+# Tool implementation within pbc-media-ingestion
 
 tool_name: "yt-dlp"
 tool_id: "yt-dlp"
-parent_pbc: "pbc-media-download"
+parent_pbc: "pbc-media-ingestion"
 version: "0.1.0"
 status: "experimental"
 created: "2025-12-12"
@@ -23,7 +23,7 @@ access:
     global_config: "C:/Users/drewa/AppData/Roaming/yt-dlp/config.txt"
   venv:
     path: ".venv/Scripts/python.exe"
-    absolute: "C:/Users/drewa/pbcs/pbc-media-download/tool-yt-dlp/.venv/Scripts/python.exe"
+    absolute: "C:/Users/drewa/pbcs/pbc-media-ingestion/tool-yt-dlp/.venv/Scripts/python.exe"
 
 # External dependencies required
 dependencies:
@@ -83,7 +83,7 @@ configs:
 # Default output location
 output:
   default_directory: "downloads/"
-  absolute: "C:/Users/drewa/pbcs/pbc-media-download/tool-yt-dlp/downloads/"
+  absolute: "C:/Users/drewa/pbcs/pbc-media-ingestion/tool-yt-dlp/downloads/"
   note: "Global config writes here by default; override with -o flag"
 
 # Key documentation for specific tasks

@@ -70,8 +70,8 @@ yt-dlp --config-location configs/audio-only.conf https://youtube.com/watch?v=VID
 
 ```bash
 # Run a script from this PBC (from any directory)
-/c/Users/drewa/pbcs/pbc-media-download/tool-yt-dlp/.venv/Scripts/python.exe \
-    /c/Users/drewa/pbcs/pbc-media-download/tool-yt-dlp/scripts/download_youtube.py \
+/c/Users/drewa/pbcs/pbc-media-ingestion/tool-yt-dlp/.venv/Scripts/python.exe \
+    /c/Users/drewa/pbcs/pbc-media-ingestion/tool-yt-dlp/scripts/download_youtube.py \
     --url https://youtube.com/watch?v=VIDEO_ID \
     --output ./downloads/
 ```
@@ -109,7 +109,7 @@ This directory is gitignored to avoid committing large media files.
 This PBC is designed as a **content acquisition** capability:
 
 ```
-pbc-media-download ──────┐
+pbc-media-ingestion ──────┐
                          ├──► rag-pipeline (transcription, indexing)
 pbc-web-crawling ────────┘
 ```
@@ -134,7 +134,7 @@ uv tool install yt-dlp
 ### 2. PBC Virtual Environment (for scripting)
 
 ```bash
-cd /c/Users/drewa/pbcs/pbc-media-download/tool-yt-dlp
+cd /c/Users/drewa/pbcs/pbc-media-ingestion/tool-yt-dlp
 uv venv
 uv pip install yt-dlp
 ```
