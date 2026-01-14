@@ -28,7 +28,7 @@ This skill is specific to the PBC monorepo structure where multiple PBCs live as
 pbcs/
 ├── pbc-web-crawling/
 │   └── tool-crawl4ai/
-├── pbc-media-download/
+├── pbc-media-ingestion/
 │   └── tool-yt-dlp/
 ├── pbc-secrets-management/
 │   └── tool-1password-cli/
@@ -70,7 +70,7 @@ Files directly in `pbcs/` root that are NOT inside any `pbc-*/` subdirectory:
 Files inside any `pbc-*/` directory (including all nested tool directories):
 
 - `pbc-web-crawling/**` → One commit for all changes in this PBC
-- `pbc-media-download/**` → One commit for all changes in this PBC
+- `pbc-media-ingestion/**` → One commit for all changes in this PBC
 - `pbc-secrets-management/**` → One commit for all changes in this PBC
 
 **Each PBC gets its own commit** with the PBC name as scope.
@@ -92,13 +92,13 @@ Changed files:
   README.md                                    → Group: root
   pbc-web-crawling/tool-crawl4ai/CLAUDE.md    → Group: pbc-web-crawling
   pbc-web-crawling/tool-crawl4ai/README.md    → Group: pbc-web-crawling
-  pbc-media-download/tool-yt-dlp/CLAUDE.md    → Group: pbc-media-download
+  pbc-media-ingestion/tool-yt-dlp/CLAUDE.md    → Group: pbc-media-ingestion
   .claude/handoffs/some-file.md               → Group: .claude (infrastructure)
 
 Result: 4 commits (in this order)
   1. root changes (CLAUDE.md, README.md)
   2. .claude infrastructure changes
-  3. pbc-media-download changes
+  3. pbc-media-ingestion changes
   4. pbc-web-crawling changes
 ```
 
@@ -189,7 +189,7 @@ Report summary:
 2. refactor(pbc-web-crawling): update tool definition schema
    - 5 files changed
 
-3. refactor(pbc-media-download): update tool definition schema
+3. refactor(pbc-media-ingestion): update tool definition schema
    - 3 files changed
 ```
 

@@ -50,7 +50,7 @@ For changes within a specific PBC directory:
 
 ```text
 refactor(pbc-web-crawling): restructure tool definitions
-docs(pbc-media-download): update README with new paths
+docs(pbc-media-ingestion): update README with new paths
 feat(pbc-secrets-management): add credential retrieval workflow
 ```
 
@@ -138,7 +138,7 @@ Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>
 Use bullet points for clarity:
 
 ```text
-refactor(pbc-media-download): update tool definition schema
+refactor(pbc-media-ingestion): update tool definition schema
 
 - Rename pbc-definition.yaml to pbc-tool-definition.yaml
 - Add tool_name, tool_id, parent_pbc fields
